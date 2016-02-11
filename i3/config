@@ -1,0 +1,264 @@
+set $i3 ~/.config/i3
+set $scripts ~/.config/i3/scripts
+
+#Worspaces appearance
+set $base00 #101218
+set $base01 #1f222d
+set $base02 #252936
+set $base03 #7780a1
+set $base04 #C0C5CE
+set $base05 #d1d4e0
+set $base06 #C9CCDB
+set $base07 #ffffff
+set $base08 #ee829f
+set $base09 #f99170
+set $base0A #ffefcc
+set $base0B #a5ffe1
+set $base0C #97e0ff
+set $base0D #97bbf7
+set $base0E #c0b7f9
+set $base0F #fcc09e
+
+set $workspace1 "1 HOME " 
+set $workspace2 "2 WEB "
+set $workspace3 "3 MUSIC "
+set $workspace4 "4 VIDEO "
+set $workspace5 "5 IRC "
+set $workspace6 "6 TORRENT "
+set $workspace7 "7 EDIT "
+set $workspace8 "8 GRAPH "
+
+set $monitor1 "DVI-I-2"
+set $monitor2 "DVI-I-3"
+
+# Program Workspaces
+assign [class="google-chrome"] $workspace2
+assign [title="mpsyt"] $workspace3
+assign [class="mpv"] $workspace4
+assign [title="irssi"] $workspace5
+assign [class="Transmission-gtk"] $workspace6
+assign [class="Mousepad"] $workspace7
+assign [class="Gimp"] $workspace8
+
+# Floating
+for_window [class="Lxappearance"] floating enable
+for_window [class="Galculator"] floating enable
+for_window [class="Seahorse"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Gimp"] floating enable
+for_window [class="Xarchiver"] floating enable
+
+#General
+set $mod Mod4
+font pango:PragmataPro 8
+floating_modifier $mod 
+workspace_auto_back_and_forth yes
+new_window pixel 2
+focus_follows_mouse  yes
+
+
+bindsym $mod+Return exec urxvt
+ 
+# Program-Related Bindings
+bindsym $mod+c exec google-chrome-stable
+bindsym $mod+m exec urxvt -e mpsyt
+bindsym $mod+i exec urxvt -e irssi
+bindsym $mod+t exec urxvt -e ranger
+bindsym Print exec scrot -cd1 schermata.png
+
+# kill focused window
+bindsym $mod+q kill
+bindsym --whole-window $mod+button2 kill
+
+# start rofi
+bindsym $Mod+F1 exec rofi -show run
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+g split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floatings
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# Workspace-Related Bindings
+  bindsym $mod+1 workspace $workspace1
+  bindsym $mod+2 workspace $workspace2
+  bindsym $mod+3 workspace $workspace3
+  bindsym $mod+4 workspace $workspace4
+  bindsym $mod+5 workspace $workspace5
+  bindsym $mod+6 workspace $workspace6
+  bindsym $mod+7 workspace $workspace7
+  bindsym $mod+8 workspace $workspace8
+  bindsym $mod+9 workspace $workspace9
+  bindsym $mod+0 workspace $workspace10
+
+  bindsym $mod+Shift+1 move container to workspace $workspace1
+  bindsym $mod+Shift+2 move container to workspace $workspace2
+  bindsym $mod+Shift+3 move container to workspace $workspace3
+  bindsym $mod+Shift+4 move container to workspace $workspace4
+  bindsym $mod+Shift+5 move container to workspace $workspace5
+  bindsym $mod+Shift+6 move container to workspace $workspace6
+  bindsym $mod+Shift+7 move container to workspace $workspace7
+  bindsym $mod+Shift+8 move container to workspace $workspace8
+  bindsym $mod+Shift+9 move container to workspace $workspace9
+  bindsym $mod+Shift+0 move container to workspace $workspace10
+
+# Workspace Monitors
+ workspace $workspace1 output $monitor1
+ workspace $workspace2 output $monitor1
+ workspace $workspace3 output $monitor1
+ workspace $workspace4 output $monitor1
+ workspace $workspace5 output $monitor1
+ workspace $workspace6 output $monitor1
+
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+  bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Vuoi davvero uscire da I3?.' -b 'Sì, esci da i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+
+# Resizing windows in i3 using keyboard only
+# # http://unix.stackexchange.com/q/255344/150597
+#
+# # Resizing by 1
+
+# Resizing by 10
+bindsym $mod+ctrl+Left resize shrink width 10 px or 10 ppt
+bindsym $mod+ctrl+Up resize grow height 10 px or 10 ppt
+bindsym $mod+ctrl+Down resize shrink height 10 px or 10 ppt
+bindsym $mod+ctrl+Right resize grow width 10 px or 10 ppt
+
+bindsym $mod+ctrl+h resize shrink width 10 px or 10 ppt
+bindsym $mod+ctrl+k resize grow height 10 px or 10 ppt
+bindsym $mod+ctrl+j resize shrink height 10 px or 10 ppt
+bindsym $mod+ctrl+l resize grow width 10 px or 10 ppt
+
+
+
+#Exit
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (p) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id i3lock, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym p exec --no-startup-id systemctl poweroff, mode "default"
+
+# back to normal: Enter or Escape
+     bindsym Return mode "default"
+         bindsym Escape mode "default"
+         }
+         bindsym $mod+Pause mode "$mode_system"
+
+# Colors
+set $black	#002B36
+set $white	#839496
+set $gray	#CCCCCC
+set $darkgray	#666666
+set $green 	#799F26
+set $blue	#4D73AA
+set $purple	#8473A7
+set $red	#B58900
+set $orange	#E59847
+set $cyan	#2AA198
+set $dark	#00252E
+
+# Window colors         border  backgr. text    indicator
+client.focused			$white  $white  $dark  $dark
+client.unfocused		$dark   $dark   $white   $white
+client.focused_inactive	$dark   $dark   $white   $dark
+client.urgent			$orange $orange $dark $white
+
+
+bar {
+    colors {
+        # Whole color settings
+        background $black
+        statusline #999999
+
+        # Type             	border  	background 	font
+ 	focused_workspace	$white	 	$white		$black
+        active_workspace	#073642 	#073642 	#696f89
+        inactive_workspace	#073642 	#073642		$white
+        urgent_workspace  	$orange		$orange		$dark
+    }
+    # i3bar position
+    position bottom
+    font pango: PragmataPro, FontAwesome 8
+
+    # Using custom i3status.conf
+    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+}
