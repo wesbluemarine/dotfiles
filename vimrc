@@ -5,9 +5,11 @@ let g:tex_flavor = "latex"
 
 set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim/after
 let g:Tex_DefaultTargetFormat='pdf'
-
+au BufWritePost *.tex silent call Tex_RunLaTeX()
+au BufWritePost *.tex silent !pkill -USR1 xdvi.bin
 
 "Vim Stuff
+let &t_Co=256
 set laststatus=2             "Always show the status bar and not on splited like before(this was the main problem)
 set encoding=utf-8
 set t_Co=256
@@ -51,6 +53,39 @@ map <C-n> :NERDTreeToggle<CR>
 
 let NERDTreeShowHidden=1
 
+" air-line
+let g:airline_theme = 'solarized'
+let g:AirlineTheme = 'solarized'
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⭠'
+let g:airline_symbols.readonly = '⭤'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
 
 "Solarized-light in GUI
 "if has('gui_running')

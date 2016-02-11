@@ -18,4 +18,136 @@ drwxr-xr-x 5 albe123 users  4096 11 feb 06.39 [01;34m..[0m
 ]2;cd ~/]1;cd[1m[7m%[27m[1m[m                                                                                                                                       ]2;albe123@arch: ~]1;~[m[27m[24m[J[39m[m[49m[40m[39m albe123@arch [44m[30m[30m ~ [49m[34m[39m [K=[?2004h[32m.[39m[39m[4m.[4ms[24m[4m.[4ms[4mc[24m[4mc[4mr[24m[4mr[4mi[24m[4mi[4mpts[1m[4m/[m[24m[4ms[24m[m[24m [m[27m[24m[J[39m[m[49m[40m[39m albe123@arch [44m[30m[30m ~ [49m[34m[39m [4m.scripts[24m[m[27m[24m[J[39m[m[49m[40m[39m albe123@arch [44m[30m[30m ~ [49m[34m[39m [4m.scripts[24m[4mt[24m[24m [4mp[24m[24m [4mi[24m[24m [4mr[24m[24m [4mc[24m[24m [4m.[4ms[24m[24m [24m[32m.[39m[24m [39m [32m.[39m[39m[4m.[4md[24m[4m.[4md[4mo[24m[4mo[4mtfiles[1m[4m/[m[24m[4ms[24m[m[24m >[?2004l
 ]2;.dotfiles]1;.dotfiles[1m[7m%[27m[1m[m                                                                                                                                       ]2;albe123@arch: ~/.dotfiles]1;~/.dotfiles[m[27m[24m[J[39m[m[49m[40m[39m albe123@arch [44m[30m[30m ~/.dotfiles [43m[34m[30m  master ● [49m[33m[39m [K=[?2004h[1m[31m.dotfiles[m[39m[9D[m[32mc[m[32md[39m[m[39m [m[39m[4m~[m[39m[4m/[24m[m[39m [m[39m [m[39m [m[39m [1m[31m.[1m[31md[1m[31mo[24m[1m[31mt[24m[1m[31mf[1m[31miles[m[39m[9D[m[39m [m[39m [m[39m [m[39m [m[39m [m[39m [m[39m [m[39m [m[39m [9D[1m[31mc[m[39m[1m[31mc[1m[31mo[m[39m[1m[31mc[1m[31mo[1m[31mm[m[39m[m[32mc[m[32mo[m[32mm[32mm[39m[1m[31mc[1m[31mo[1m[31mm[1m[31mm[1m[31mm[m[39m[1m[31mm[1m[31mi[m[39m[1m[37m[41mc[1m[37m[41mo[1m[37m[41mm[1m[37m[41mm[1m[37m[41mm[1m[37m[41mi[m[39m[49m[49m[1m[31mc[49m[1m[31mo[49m[1m[31mm[49m[1m[31mm[49m[1m[31mm[m[39m[m[39m[49m [m[32mc[m[32mo[m[32mm[m[32mm[39m[m[39m [32mg[32mi[32mt[39m[39m [1m[37m[45mcomm[m[39m[49mit -m [33m"Add i3 files"[39m[24D[m[39m[49mc[m[39m[49mo[m[39m[49mm[m[39m[49mm[19C[?2004l
 [1m[7m%[27m[1m[m                                                                                                                                       ]2;albe123@arch: ~/.dotfiles]1;~/.dotfiles[m[27m[24m[J[39m[m[49m[40m[39m [31m✘[40m[39m albe123@arch [44m[30m[30m ~/.dotfiles [43m[34m[30m  master ● [49m[33m[39m [K=[?2004h[?2004l
-[1m[7m%[27m[1m[m                                                                                                                                       ]2;albe123@arch: ~/.dotfiles]1;~/.dotfiles[m[27m[24m[J[39m[m[49m[40m[39m [31m✘[40m[39m albe123@arch [44m[30m[30m ~/.dotfiles [43m
+[1m[7m%[27m[1m[m                                                                                                                                       ]2;albe123@arch: ~/.dotfiles]1;~/.dotfiles[m[27m[24m[J[39m[m[49m[40m[39m [31m✘[40m[39m albe123@arch [44m[30m[30m ~/.dotfiles [43m[34m[30m  master ● [49m[33m[39m [K=[?2004h[?2004l
+[1m[7m%[27m[1m[m                                                                                                                                       ]2;albe123@arch: ~/.dotfiles]1;~/.dotfiles[m[27m[24m[J[39m[m[49m[40m[39m [31m✘[40m[39m albe123@arch [44m[30m[30m ~/.dotfiles [43m[34m[30m  master ● [49m[33m[39m [K=[?2004h[32mg[39m[39m[4mg[4mi[24m[24m[32mg[24m[32mi[32mt[39m add [4m.[24m>[?2004l
+]2;git add .]1;git[1m[7m%[27m[1m[m                                                                                                                                       ]2;albe123@arch: ~/.dotfiles]1;~/.dotfiles[m[27m[24m[J[39m[m[49m[40m[39m albe123@arch [44m[30m[30m ~/.dotfiles [43m[34m[30m  master ✚ [49m[33m[39m [K=[?2004h[32mgit[39m add [4m.[24m[24m    checkout>[?2004l
+]2;git checkout]1;gitM	i3/i3blocks.conf
+A	scripts/.bandwidth.swp
+A	scripts/IconicWeather.sh
+A	scripts/bandwidth
+A	scripts/screencast.sh
+A	typescript
+Your branch is up-to-date with 'origin/master'.
+[1m[7m%[27m[1m[m                                                                                                                                       ]2;albe123@arch: ~/.dotfiles]1;~/.dotfiles[m[27m[24m[J[39m[m[49m[40m[39m albe123@arch [44m[30m[30m ~/.dotfiles [43m[34m[30m  master ✚ [49m[33m[39m [K=[?2004h[32mgit[39m checkout[8Dadd [4m.[24m   [9D[1m[31m.[1m[31md[1m[31mo[1m[31mt[1m[31mf[1m[31mi[1m[31ml[1m[31me[24m[1m[31ms[m[39m[9D[m[32mc[m[32md[39m[m[39m [m[39m[4m~[m[39m[4m/[24m[m[39m [m[39m [m[39m [m[39m [1m[31m.[1m[31md[1m[31mo[24m[1m[31mt[24m[1m[31mf[1m[31miles[m[39m[9D[m[32mg[m[32mi[m[32mt[39m[m[39m [m[39ma[m[39md[m[39md[m[39m [m[39m[4m.[24mchec[24mkout[12D[39m [39m [39m          [12D[32mg[39m[39m[4mg[4mi[24m[24m[32mg[24m[32mi[32mt[39m commit - [33m"[39m[33m"[33mA[39m[33mA[33mf[39m[33mf[33mf[39m[33mf[39m[39m [33mA[39m[39m [33mA[33md[39m[33md[33md[39m[33md[33m [39m[33m [33ms[39m[33ms[33mc[39m[33mc[33mr[39m[33mr[33mi[39m[33mi[33mt[39m[33mt[33mp[39m[33mt[39m[39m [33mi[39m[39m [33mi[33mc[39m[33mi[39m[39m [33mi[33mp[39m[33mp[33mt[39m[33mp[39m[39m [33mi[39m[39m [33mi[33mp[39m[33mp[33mt[39m[33mt[33ms[39m[33ms[33m"[39m>[?2004l
+]2;git commit - "Add scripts"]1;giterror: pathspec '-' did not match any file(s) known to git.
+error: pathspec 'Add scripts' did not match any file(s) known to git.
+[1m[7m%[27m[1m[m                                                                                                                                       ]2;albe123@arch: ~/.dotfiles]1;~/.dotfiles[m[27m[24m[J[39m[m[49m[40m[39m [31m✘[40m[39m albe123@arch [44m[30m[30m ~/.dotfiles [43m[34m[30m  master ✚ [49m[33m[39m [K=[?2004h[32mgit[39m commit - [33m"Add scripts"[39m[21Dheckout [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [14D[8Dadd [4m.[24m   [9D[1m[31m.[1m[31md[1m[31mo[1m[31mt[1m[31mf[1m[31mi[1m[31ml[1m[31me[24m[1m[31ms[m[39m[9D[m[32mc[m[32md[39m[m[39m [m[39m[4m~[m[39m[4m/[24m[m[39m [m[39m [m[39m [m[39m [32mm[32mv[39m [24m~[24m/.script [4m~/.scripts[24m[23D[32ml[32ms[39m -all      [24m [24m [24m [24m [24m [24m [24m [24m [24m [24m [16D  [32mr[32mm[39m i3barconky[13D[32ml[32ms[39m -a        [8D[?2004l
+[1m[7m%[27m[1m[m                                                                                                                                       ]2;albe123@arch: ~/.dotfiles]1;~/.dotfiles[m[27m[24m[J[39m[m[49m[40m[39m [31m✘[40m[39m albe123@arch [44m[30m[30m ~/.dotfiles [43m[34m[30m  master ✚ [49m[33m[39m [K=[?2004h[?2004l
+[1m[7m%[27m[1m[m                                                                                                                                       ]2;albe123@arch: ~/.dotfiles]1;~/.dotfiles[m[27m[24m[J[39m[m[49m[40m[39m [31m✘[40m[39m albe123@arch [44m[30m[30m ~/.dotfiles [43m[34m[30m  master ●✚ [49m[33m[39m [K=[?2004h[?2004l
+[1m[7m%[27m[1m[m                                                                                                                                       ]2;albe123@arch: ~/.dotfiles]1;~/.dotfiles[m[27m[24m[J[39m[m[49m[40m[39m [31m✘[40m[39m albe123@arch [44m[30m[30m ~/.dotfiles [43m[34m[30m  master ●✚ [49m[33m[39m [K=[?2004h[1m[31mo[m[39m[1m[31mo[1m[31mr[m[39m[1m[31mo[1m[31mr[1m[31mi[m[39m[1m[31mi[1m[31mg[m[39m[1m[31mg[1m[31mi[m[39m[m[32mg[m[32mi[m[32mt[39m[m[39m [m[39mpush [1m[37m[45morigi[m[39m[49mn master
+[K[A[55C[m[39m[49mo[m[39m[49mr[m[39m[49mi[m[39m[49mg[m[39m[49mi[1B[K>[?2004l
+]2;git push origin master]1;gitUsername for 'https://github.com': wesbluemarine
+Password for 'https://wesbluemarine@github.com': 
+Everything up-to-date
+[1m[7m%[27m[1m[m                                                                                                                                       ]2;albe123@arch: ~/.dotfiles]1;~/.dotfiles[m[27m[24m[J[39m[m[49m[40m[39m albe123@arch [44m[30m[30m ~/.dotfiles [43m[34m[30m  master ●✚ [49m[33m[39m [K=[?2004h[1m[31mc[m[39m[m[32mc[32md[39m [1m[31mc[m[39m[39m [m[39m [32mgit[39m push origin master
+[K[K[A[44C[4Ccommit - [33m"[33mA[33md[33md[33m [33ms[33mc[33mr[33mi[33mpts"[39m[1B[K[A[70C>[?2004l[1B]2;git commit - "Add scripts"]1;giterror: pathspec '-' did not match any file(s) known to git.
+error: pathspec 'Add scripts' did not match any file(s) known to git.
+[1m[7m%[27m[1m[m                                                                                                                                       ]2;albe123@arch: ~/.dotfiles]1;~/.dotfiles[m[27m[24m[J[39m[m[49m[40m[39m [31m✘[40m[39m albe123@arch [44m[30m[30m ~/.dotfiles [43m[34m[30m  master ●✚ [49m[33m[39m [K=[?2004h[32mgit[39m commit - [33m"Add scripts"[39m"[39mA[39md[39md[39m [39ms[39mc[39mr[39mi[39mp[39mt[39ms[39m"[39m [14D[33m"[33mA[33md[33md[33m [33ms[33mc[33mr[33mi[33mp[33mt[33ms[33m"[39m [14D>[?2004l
+]2;git commit "Add scripts"]1;giterror: pathspec 'Add scripts' did not match any file(s) known to git.
+[1m[7m%[27m[1m[m                                                                                                                                       ]2;albe123@arch: ~/.dotfiles]1;~/.dotfiles[m[27m[24m[J[39m[m[49m[40m[39m [31m✘[40m[39m albe123@arch [44m[30m[30m ~/.dotfiles [43m[34m[30m  master ●✚ [49m[33m[39m [K=[?2004h[32mgit[39m commit [33m"Add scripts"[39m[13D[@[@- [13C  [22Dpush orig[39mi[39mn[39m [39mm[39ma[39ms[39mt[39me[39mr[39m [39m [39m [39m 
+[K[K[A[46C[1B[A[50Ccommit - [33m"[33mA[33md[33md[33m [33ms[33mc[33mr[33mi[33mpts"[39m[1B[K[A[72C[15D[P[P[13C  [33ms[39m[39m [33mt[39m[39m [33mp[39m[39m [33mi[39m[39m [33mr[39m[39m [33mc[39m[39m [33ms[39m[39m [33m [39m[39m [33md[39m[39m [33md[39m[39m [33mA[39m[39m [33m"[39m[39m [39m [10D[1m[37m[45mg[1m[37m[45mi[1m[37m[45mt[39m[1m[37m[45m [1m[37m[45mc[1m[37m[45mo[1m[37m[45mm[1m[37m[45mm[1m[37m[45mi[1m[37m[45mt[m[39m[49m [33m"Add scripts"[39m[13D[@[@- [13C  [14Dm[39m [33m"[33mA[33md[33md[33m [33mi[33m3[33m [33mf[33mi[33ml[33me[33ms"[39m[13D[33mf[33mi[33mr[33ms[33mt[33m [33mc[33mo[33mm[33mm[33mi[33mt[1C[28D[m[49m[32mg[m[49m[32mi[m[49m[32mt[39m[m[39m[49m [m[39m[49mc[m[39m[49mo[m[39m[49mm[m[39m[49mm[m[39m[49mi[m[39m[49mt[17C[1C[33m"[39m[39m [33m"[39m[39m [33m"[39m[39m [33m"[39m[39m [33m"[39m[39m [33m"[39m[39m [33m"[39m[39m [33m"[39m[39m [33m"[39m[39m [33m"[39m[39m [33m"[39m[39m [33m"[39m[39m [33mA[33m"[39m[33md[33m"[39m[33md[33m"[39m[33m [33m"[39m[33ms[33m"[39m[33mc[33m"[39m[33mr[33m"[39m[33mi[33m"[39m[33mp[33m"[39m[33mt[33m"[39m[33ms[33m"[39m>[?2004l[1B]2;git commit -m "Add scripts"]1;git[master 926afcb] Add scripts
+ 6 files changed, 182 insertions(+), 2 deletions(-)
+ create mode 100644 scripts/.bandwidth.swp
+ create mode 100755 scripts/IconicWeather.sh
+ create mode 100755 scripts/bandwidth
+ create mode 100755 scripts/screencast.sh
+ create mode 100644 typescript
+[1m[7m%[27m[1m[m                                                                                                                                       ]2;albe123@arch: ~/.dotfiles]1;~/.dotfiles[m[27m[24m[J[39m[m[49m[40m[39m albe123@arch [44m[30m[30m ~/.dotfiles [43m[34m[30m  master ● [49m[33m[39m [K=[?2004h[32mgit[39m commit -m [33m"Add scripts"[39m[16D[3P[13C   [13D[@[@- [13C  [22Dpush orig[39mi[39mn[39m [39mm[39ma[39ms[39mt[39me[39mr[39m [39m [39m [39m 
+[K[K[A[65C            >[?2004l[1B
+]2;git push]1;gitwarning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': wesble uemarine
+Password for 'https://wesbluemarine@github.com': 
+Counting objects: 10, done.
+Delta compression using up to 4 threads.
+Compressing objects:  10% (1/10)   Compressing objects:  20% (2/10)   Compressing objects:  30% (3/10)   Compressing objects:  40% (4/10)   Compressing objects:  50% (5/10)   Compressing objects:  60% (6/10)   Compressing objects:  70% (7/10)   Compressing objects:  80% (8/10)   Compressing objects:  90% (9/10)   Compressing objects: 100% (10/10)   Compressing objects: 100% (10/10), done.
+Writing objects:  10% (1/10)   Writing objects:  20% (2/10)   Writing objects:  30% (3/10)   Writing objects:  40% (4/10)   Writing objects:  50% (5/10)   Writing objects:  60% (6/10)   Writing objects:  70% (7/10)   Writing objects:  80% (8/10)   Writing objects:  90% (9/10)   Writing objects: 100% (10/10)   Writing objects: 100% (10/10), 5.04 KiB | 0 bytes/s, done.
+Total 10 (delta 3), reused 0 (delta 0)
+To https://github.com/wesbluemarine/dotfiles.git
+   395eef1..926afcb  master -> master
+[1m[7m%[27m[1m[m                                                                                                                                       ]2;albe123@arch: ~/.dotfiles]1;~/.dotfiles[m[27m[24m[J[39m[m[49m[40m[39m albe123@arch [44m[30m[30m ~/.dotfiles [43m[34m[30m  master ● [49m[33m[39m [K=[?2004h[7mgit config credential.helper store[27m[34D[27m[32mg[27m[32mi[27m[32mt[39m[27m [27mc[27mo[27mn[27mf[27mi[27mg[27m [27mc[27mr[27me[27md[27me[27mn[27mt[27mi[27ma[27ml[27m.[27mh[27me[27ml[27mp[27me[27mr[27m [27ms[27mt[27mo[27mr[27me>[?2004l
+]2;git config credential.helper store]1;git[1m[7m%[27m[1m[m                                                                                                                                       ]2;albe123@arch: ~/.dotfiles]1;~/.dotfiles[m[27m[24m[J[39m[m[49m[40m[39m albe123@arch [44m[30m[30m ~/.dotfiles [43m[34m[30m  master ● [49m[33m[39m [K=[?2004h[32mgit[39m config credential.helper store[30Dpush                          
+[K[K>[?2004l
+]2;git push]1;gitwarning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': wesbluemarine
+Password for 'https://wesbluemarine@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/wesbluemarine/dotfiles.git/'
+[1m[7m%[27m[1m[m                                                                                                                                       ]2;albe123@arch: ~/.dotfiles]1;~/.dotfiles[m[27m[24m[J[39m[m[49m[40m[39m [31m✘[40m[39m albe123@arch [44m[30m[30m ~/.dotfiles [43m[34m[30m  master ● [49m[33m[39m [K=[?2004h[32mgit[39m push
+[K[K>[?2004l
+]2;git push]1;gitwarning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': wesbluemarine
+Password for 'https://wesbluemarine@github.com': 
+Everything up-to-date
+[1m[7m%[27m[1m[m                                                                                                                                       ]2;albe123@arch: ~/.dotfiles]1;~/.dotfiles[m[27m[24m[J[39m[m[49m[40m[39m albe123@arch [44m[30m[30m ~/.dotfiles [43m[34m[30m  master ● [49m[33m[39m [K=[?2004h[32mgit[39m push
+[K[K>[?2004l
+]2;git push]1;gitwarning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
