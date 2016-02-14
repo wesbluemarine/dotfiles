@@ -50,10 +50,12 @@ for_window [class="Xarchiver"] floating enable
 
 #General
 set $mod Mod4
-font pango:PragmataPro 8
+font pango:PragmataPro Mono 8
 floating_modifier $mod 
 workspace_auto_back_and_forth yes
-new_window pixel 2
+new_window pixel 1
+gaps inner 0
+gaps outer 0
 focus_follows_mouse  yes
 
 
@@ -257,7 +259,7 @@ bar {
     }
     # i3bar position
     position bottom
-    font pango: PragmataPro, FontAwesome 8
+    font pango: PragmataPro Mono, FontAwesome 10
 
     # Using custom i3status.conf
     status_command i3blocks -c ~/.config/i3/i3blocks.conf
