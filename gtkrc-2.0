@@ -25,3 +25,4 @@ style "no-resize-handle"
 }
 
 class "GtkWidget" style "no-resize-handle"
+

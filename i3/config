@@ -27,21 +27,23 @@ set $workspace5 "5 IRC "
 set $workspace6 "6 TORRENT "
 set $workspace7 "7 EDIT "
 set $workspace8 "8 GRAPH "
-
+set $workspace9 "9 DOC "
 set $monitor1 "DVI-I-2"
 set $monitor2 "DVI-I-3"
 
 # Program Workspaces
-assign [class="google-chrome"] $workspace2
+assign [class="chromium"] $workspace2
 assign [title="mpsyt"] $workspace3
 assign [class="mpv"] $workspace4
-assign [title="irssi"] $workspace5
+assign [title="weechat"] $workspace5
 assign [class="Transmission-gtk"] $workspace6
 assign [class="Mousepad"] $workspace7
 assign [class="Gimp"] $workspace8
+assign [class="Gvim"] $workspace9
 
 # Floating
 for_window [class="Lxappearance"] floating enable
+for_window [class="Psensor"] floating enable
 for_window [class="Galculator"] floating enable
 for_window [class="Seahorse"] floating enable
 for_window [class="Pavucontrol"] floating enable
@@ -57,14 +59,12 @@ new_window pixel 1
 gaps inner 0
 gaps outer 0
 focus_follows_mouse  yes
-
-
 bindsym $mod+Return exec urxvt
  
 # Program-Related Bindings
-bindsym $mod+c exec google-chrome-stable
+bindsym $mod+c exec chromium
 bindsym $mod+m exec urxvt -e mpsyt
-bindsym $mod+i exec urxvt -e irssi
+bindsym $mod+i exec urxvt -e weechat
 bindsym $mod+t exec urxvt -e ranger
 bindsym Print exec scrot -cd1 schermata.png
 
@@ -156,6 +156,8 @@ bindsym $mod+a focus parent
  workspace $workspace5 output $monitor1
  workspace $workspace6 output $monitor1
 
+# Load Layout
+exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/.i3/ws_2-config.json'"
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -212,7 +214,7 @@ bindsym $mod+ctrl+l resize grow width 10 px or 10 ppt
 #Exit
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (p) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3lock, mode "default"
+    bindsym l exec --no-startup-id /bin/lock, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
     bindsym s exec --no-startup-id systemctl suspend, mode "default"
     bindsym h exec --no-startup-id systemctl hibernate, mode "default"

@@ -19,7 +19,7 @@ set clipboard=unnamed
 set paste
 set gp+=a
 set mouse=a
-set gfn=PragmataPro\ for\ Powerline\ Bold\ 10
+set gfn=PragmataPro\ Mono\ 10
 
 "Vim GUI Stuff
 :set guioptions-=m  "remove menu bar
@@ -42,12 +42,10 @@ set number
 set background=dark
 colorscheme solarized
 
-
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
 
 map <C-n> :NERDTreeToggle<CR>
 
@@ -61,7 +59,6 @@ let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-
 
 " unicode symbols
 let g:airline_left_sep = '»'
@@ -87,9 +84,9 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
-"Solarized-light in GUI
-"if has('gui_running')
-"	    set background=light
-"    else
-"	        set background=dark
-"	endif
+" Solarized-light in GUI
+if has('gui_running')
+	    set background=light
+    else
+	        set background=dark
+	endif
