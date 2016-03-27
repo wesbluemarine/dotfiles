@@ -38,7 +38,7 @@ Xft.dpi: 96
 *.internalBorder: 		5
 *.urgentOnBell:			true
 *.perl-lib:            		/usr/lib/urxvt/perl/
-*.url-launcher:        		/usr/bin/google-chrome-stable
+*.url-launcher:        		/usr/bin/chromium
 *.perl-ext-common:  		default,matcher,clipboard,resize-font
 *.resize-font.smaller: 		C-Down
 *.resize-font.bigger: 		C-Up
