@@ -27,6 +27,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
+	{ "Mpv",     NULL,       NULL,       0,            1,           -1 },
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
@@ -58,11 +59,11 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "/home/makaba/.stterm-0.6/st", "-e", "tmux", NULL };
-static const char *cmdrshift[] = { "screenshot", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{      0,                       XK_Print,  spawn,          SHCMD("exec scrot -q 100 '%Y-%m-%d-%H-%M-%S.png' -e 'mv $f $m ~/Pictures/Screenshots/'") },
+	{      0,                       XK_Pause,  spawn,          SHCMD("~/.script/clipmenu/clipmenu  -l 0 -i -fn 'Terminus (TTF):pixelsize=16'") },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
