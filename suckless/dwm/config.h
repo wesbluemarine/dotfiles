@@ -5,8 +5,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Terminus (TTF):pixelsize=16" };
-static const char dmenufont[]       = "Terminus (TTF):pixelsize=16";
+static const char *fonts[]          = { "Terminus (TTF):pixelsize=17" };
+static const char dmenufont[]       = "Terminus (TTF):pixelsize=17";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -64,7 +64,7 @@ static const char *termcmd[]  = { "/home/makaba/.stterm-0.6/st", "-e", "tmux", N
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{      0,                       XK_Print,  spawn,          SHCMD("exec scrot -q 100 '%Y-%m-%d-%H-%M-%S.png' -e 'mv $f $m ~/Pictures/Screenshots/'") },
-	{      0,                       XK_Pause,  spawn,          SHCMD("~/.script/clipmenu/clipmenu  -l 0 -i -fn 'Terminus (TTF):pixelsize=16'") },
+	{      0,                       XK_Pause,  spawn,          SHCMD("~/.script/clipmenu/clipmenu  -l 0 -i -fn 'Terminus (TTF):pixelsize=17'") },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
