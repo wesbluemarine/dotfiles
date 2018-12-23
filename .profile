@@ -22,6 +22,7 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 alias suspend="systemctl suspend"
+alias logout="killall xinit"
 alias reboot="systemctl reboot"
 alias poweroff="systemctl poweroff"
 alias gimp="flatpak run org.gimp.GIMP"
