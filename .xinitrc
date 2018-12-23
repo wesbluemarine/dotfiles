@@ -1,6 +1,7 @@
 xsetroot -solid "#696969" &
 ~/.script/dwm_status &
 ~/.script/clipmenu/clipmenud &
+~/.script/xvisbell/xvisbell &
 
 while true; do
     # Log stderror to a file 
