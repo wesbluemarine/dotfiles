@@ -1,4 +1,5 @@
 xsetroot -solid "#696969" &
+spacefm -d &
 ~/.script/dwm_status &
 ~/.script/clipmenu/clipmenud &
 ~/.script/xvisbell/xvisbell &
