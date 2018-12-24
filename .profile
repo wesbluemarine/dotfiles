@@ -21,6 +21,7 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+alias nmanager="~/.script/networkmanager-dmenu/networkmanager_dmenu  -fn "iosevka:pixelsize=14""
 alias suspend="systemctl suspend"
 alias logout="killall xinit"
 alias reboot="systemctl reboot"
