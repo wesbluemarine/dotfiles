@@ -59,7 +59,7 @@ print_mem(){
 
 print_cpu(){
 	cpu="$(top -bn 2 -d 0.01 | grep '^%Cpu' | tail -n 1 | gawk '{print $2+$4+$6}')"
-	echo -e "$cpu"
+	echo -e "$cpu%"
 }
 
 print_temp(){
@@ -104,7 +104,7 @@ do
 	vel_recv=$(get_velocity $received_bytes $old_received_bytes $now)
 	vel_trans=$(get_velocity $transmitted_bytes $old_transmitted_bytes $now)
 
-	xsetroot -name "$(print_mem) $vel_recv $vel_trans $(print_cpu)% $(print_temp) $(print_net) $(print_date)"
+	xsetroot -name "$(print_mem) $vel_recv $vel_trans $(print_cpu) $(print_temp) $(print_net) $(print_date)"
 
 	# Update old values to perform new calculations
 	old_received_bytes=$received_bytes
