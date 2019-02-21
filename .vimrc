@@ -39,3 +39,6 @@ set wildmenu
 syntax on
 filetype plugin indent on
 set nofoldenable
+
+"Recompile suckless programs automatically;
+autocmd	BufWritePost config.h !make
