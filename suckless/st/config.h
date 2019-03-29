@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "iosevka:pixelsize=16";
+static char font[] = "terminus:pixelsize=14";
 static int borderpx = 2;
 static char shell[] = "/bin/sh";
 static char *utmp = NULL;
