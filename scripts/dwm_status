@@ -88,10 +88,8 @@ print_date(){
 }
 
 show_record(){
-	test -f /tmp/r2d2 || return
-	rp=$(cat /tmp/r2d2 | awk '{print $2}')
-	size=$(du -h $rp | awk '{print $1}')
-	echo " $size $(basename $rp)"
+	rp="$([ -f /tmp/out.mkv ] && echo "⚫")"
+	echo -e "$rp"
 }
 
 while true
@@ -104,7 +102,7 @@ do
 	vel_recv=$(get_velocity $received_bytes $old_received_bytes $now)
 	vel_trans=$(get_velocity $transmitted_bytes $old_transmitted_bytes $now)
 
-	xsetroot -name "$(print_mem) $vel_recv $vel_trans $(print_cpu) $(print_temp) $(print_net) $(print_date)"
+	xsetroot -name "$vel_recv $vel_trans $(print_mem) $(print_cpu) $(print_temp) $(print_net) $(show_record) $(print_date)"
 
 	# Update old values to perform new calculations
 	old_received_bytes=$received_bytes
