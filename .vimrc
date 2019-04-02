@@ -1,6 +1,9 @@
 let &t_Co=256
 set t_Co=256
 set title
+set number
+set relativenumber
+set cursorline
 set ruler
 set showmatch
 set ignorecase
@@ -11,7 +14,7 @@ set nobackup
 set clipboard+=unnamedplus
 set paste
 set go+=a
-colorscheme ron
+colorscheme elflord
 
 set encoding=utf-8
 
@@ -20,7 +23,7 @@ nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 noremap <F3> :set invnumber<CR>
 inoremap <F3> <C-O>:set invnumber<CR>
-vmap <C-c> "+y
+map <y> "+y<CR>
 
 set list listchars=nbsp:¬,tab:»·,trail:·,extends:>
 set shiftwidth=4
@@ -40,5 +43,17 @@ syntax on
 filetype plugin indent on
 set nofoldenable
 
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+call plug#end()
+
+map <C-n> :NERDTreeToggle<CR>
+
 "Recompile suckless programs automatically;
 autocmd	BufWritePost config.h !make
+
+"File name on Tmux
+if exists('$TMUX')
+    autocmd BufEnter * call system("tmux rename-window '" . expand("%:t") . "'")
+    autocmd VimLeave * call system("tmux setw automatic-rename")
+endif
