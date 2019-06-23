@@ -62,7 +62,7 @@ static const char *termcmd[]  = { "/home/makaba/.st-0.8.2/st", "-e", "tmux", NUL
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{      0,                       XK_Print,  spawn,          SHCMD("scrot -q 100 '%Y-%m-%d-%H-%M-%S.png' -e 'mv $f $m ~/Pictures/Screenshots/'") },
-	{      0,                       XK_Pause,  spawn,          SHCMD("~/.script/clipmenu/clipmenu  -l 0 -i -fn 'iosevka:pixelsize=11'") },
+	{      0,                       XK_Insert,  spawn,          SHCMD("~/.script/clipmenu/clipmenu  -l 0 -i -fn 'iosevka:pixelsize=11'") },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
