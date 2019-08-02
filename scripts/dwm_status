@@ -62,6 +62,11 @@ print_cpu(){
 	echo -e "$cpu%"
 }
 
+print_cpufreq(){
+	cpufreq="$(lscpu | grep 'CPU MHz' | awk '{print $3}')"
+	echo -e "${cpufreq}Mhz"
+}
+
 print_temp(){
 	test -f /sys/devices/virtual/thermal/thermal_zone2/temp || return 0
 	echo $(head -c 2 /sys/devices/virtual/thermal/thermal_zone2/temp)C
@@ -88,7 +93,7 @@ print_date(){
 }
 
 show_record(){
-	rp="$([ -f /tmp/out.mkv ] && echo "⚫")"
+	rp="$([ -f /tmp/out.mkv ] && echo "[REC]")"
 	echo -e "$rp"
 }
 
@@ -102,7 +107,7 @@ do
 	vel_recv=$(get_velocity $received_bytes $old_received_bytes $now)
 	vel_trans=$(get_velocity $transmitted_bytes $old_transmitted_bytes $now)
 
-	xsetroot -name "$vel_recv $vel_trans $(print_mem) $(print_cpu) $(print_temp) $(print_net) $(show_record) $(print_date)"
+	xsetroot -name "$vel_recv $vel_trans $(print_mem) $(print_cpu) $(print_cpufreq) $(print_temp) $(print_net) $(show_record) $(print_date)"
 
 	# Update old values to perform new calculations
 	old_received_bytes=$received_bytes
