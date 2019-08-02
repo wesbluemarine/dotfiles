@@ -21,6 +21,7 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+alias dwm_status="~/.script/dwm_status"
 alias suspend="systemctl suspend"
 alias logout="killall xinit"
 alias reboot="systemctl reboot"
