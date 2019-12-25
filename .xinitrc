@@ -1,12 +1,1 @@
-xsetroot -solid "#696969" &
-spacefm -d &
-~/.script/dwm_status &
-~/.script/clipmenu/clipmenud &
-~/.script/xvisbell/xvisbell &
-
-while true; do
-    # Log stderror to a file 
-    ~/.dwm/dwm 2> ~/.dwm.log
-    # No error logging
-    #~/.dwm/dwm >/dev/null 2>&1
-done
+dbus-launch --sh-syntax --exit-with-session ~/.local/bin/startdw
