@@ -1,5 +1,4 @@
 #!/bin/bash
-# Screenshot: http://s.natalian.org/2013-08-17/dwm_status.png
 # Network speed stuff stolen from http://linuxclues.blogspot.sg/2009/11/shell-script-show-network-speed.html
 
 # This function parses /proc/net/dev file searching for a line containing $interface data.
