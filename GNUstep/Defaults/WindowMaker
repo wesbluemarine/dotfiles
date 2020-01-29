@@ -1,0 +1,139 @@
+{
+  FrameBorderColor = "#000000";
+  FTitleColor = "#ffffff";
+  LTCMaximizeKey = None;
+  MenuDisabledColor = "#7f7f7f";
+  CycleIgnoreMinimized = NO;
+  LastWorkspaceKey = None;
+  PixmapPath = (
+    "/home/makaba/GNUstep/Library/WindowMaker/Pixmaps",
+    "/home/makaba/GNUstep/Library/WindowMaker/Backgrounds",
+    "/home/makaba/GNUstep/Library/WindowMaker/CachedPixmaps",
+    "/usr/share/WindowMaker/Pixmaps",
+    "/usr/share/WindowMaker/Backgrounds",
+    "/usr/share/pixmaps"
+  );
+  IconTitleBack = "#000000";
+  MoveToWorkspace9Key = None;
+  FTitleBack = (solid, "#000000");
+  MoveToPrevWorkspaceLayerKey = None;
+  MiniwindowPreviewBalloons = YES;
+  MouseForwardButtonAction = None;
+  MoveToWorkspace7Key = None;
+  RBCMaximizeKey = None;
+  WindowShortcut10Key = None;
+  IconTitleColor = "#ffffff";
+  MoveToWorkspace2Key = None;
+  MenuTitleColor = "#ffffff";
+  MouseWheelTiltAction = None;
+  WindowShortcut3Key = None;
+  SmoothWorkspaceBack = YES;
+  WindowRelaunchKey = F12;
+  EnableWorkspacePager = NO;
+  WindowShortcut4Key = None;
+  NoWindowOverDock = YES;
+  OmnipresentKey = None;
+  WorkspaceBack = (
+    spixmap,
+    "/home/makaba/GNUstep/Library/WindowMaker/Backgrounds/vaporwavejazz.jpg",
+    "#333333"
+  );
+  LBCMaximizeKey = None;
+  SnapEdgeDetect = 1;
+  HighlightTextColor = "#000000";
+  WindowShortcut9Key = None;
+  HelpBalloons = NO;
+  WindowSnapping = YES;
+  KeepAtBottomKey = None;
+  MoveResizeKey = None;
+  KeepOnTopKey = None;
+  AutoArrangeIcons = YES;
+  ClipTitleColor = "#000000";
+  AppIconBalloons = NO;
+  MoveHalfMaximizedWindowsBetweenScreens = NO;
+  FrameFocusedBorderColor = "#000000";
+  WindowTitleFont = "Sans:weight=200:pixelsize=12";
+  MoveToWorkspace8Key = None;
+  RunKey = "Mod1+F2";
+  LHMaximizeKey = None;
+  MoveToPrevWorkspaceKey = None;
+  MoveToWorkspace6Key = None;
+  MiniPreviewSize = 72;
+  MoveToWorkspace10Key = None;
+  BHMaximizeKey = None;
+  MouseBackwardButtonAction = None;
+  KbdModeLock = NO;
+  CycleActiveHeadOnly = NO;
+  MoveToWorkspace1Key = None;
+  IgnoreGtkHints = NO;
+  WindowShortcut1Key = None;
+  ShowClipTitle = YES;
+  RHMaximizeKey = None;
+  FrameSelectedBorderColor = "#ffffff";
+  THMaximizeKey = None;
+  AlternativeHalfMaximized = NO;
+  WindowShortcut2Key = None;
+  MoveToNextWorkspaceLayerKey = None;
+  WorkspaceMapKey = None;
+  ToggleKbdModeKey = None;
+  DragMaximizedWindow = RestoreGeometry;
+  DoNotMakeAppIconsBounce = NO;
+  MiniwindowTitleBalloons = NO;
+  MaximusKey = None;
+  WindowShortcut7Key = None;
+  OpaqueResize = YES;
+  RaiseAppIconsWhenBouncing = NO;
+  ResizeIncrement = 0;
+  WindowShortcut8Key = None;
+  OpaqueMoveResizeKeyboard = NO;
+  MoveToLastWorkspaceKey = None;
+  GroupNextKey = None;
+  Attraction = NO;
+  SingleClickLaunch = NO;
+  MenuTextColor = "#000000";
+  IconBack = (cpixmap, "/home/makaba/sqralbi02.tif", "#000000");
+  DisableBlinking = NO;
+  AntialiasedText = YES;
+  MoveToWorkspace5Key = None;
+  WorkspaceNameDisplayPosition = center;
+  NoWindowOverIcons = YES;
+  ScreenSwitchKey = None;
+  MenuTitleBack = (solid, "#000000");
+  SnapCornerDetect = 10;
+  MoveToNextWorkspaceKey = None;
+  HMaximizeKey = None;
+  SnapToTopMaximizesFullscreen = YES;
+  CloseKey = "Shift+Mod1+Q";
+  HighlightColor = "#ffffff";
+  GroupPrevKey = None;
+  PointerWithHalfMaxWindows = NO;
+  MoveToWorkspace3Key = None;
+  MinimizeAllKey = "Shift+Mod1+M";
+  CClipTitleColor = "#616161";
+  WindowShortcut5Key = None;
+  HideOthersKey = "Shift+Mod1+H";
+  IconPath = (
+    "/usr/share/WindowMaker/Icons",
+    "/usr/share/WindowMaker/Pixmaps",
+    "/home/makaba/GNUstep/Library/WindowMaker/Pixmaps",
+    "/home/makaba/GNUstep/Library/WindowMaker/CachedPixmaps",
+    "/home/makaba/.icons/NextSpiritForGnustep",
+    "/usr/share/icons/gnome/48x48/apps",
+    "/usr/lib/firefox/browser/chrome/icons/default",
+    "/home/makaba/.icons/GNUstep/apps/48",
+    "/home/makaba/.local/share/icons",
+    "/home/makaba/.icons/Apps",
+    "/home/makaba/.local/share/icons/hicolor/48x48/apps"
+  );
+  WindowShortcut6Key = None;
+  PTitleBack = (solid, "#000000");
+  UTitleColor = "#000000";
+  ViKeyMenus = NO;
+  BounceAppIconsWhenUrgent = YES;
+  CirculateRaise = NO;
+  HighlightActiveApp = YES;
+  UTitleBack = (solid, "#aaaaaa");
+  PTitleColor = "#ffffff";
+  MoveToWorkspace4Key = None;
+  RTCMaximizeKey = None;
+}

@@ -1,0 +1,37 @@
+{
+  FrameBorderColor = "#000000";
+  FTitleColor = "#ffffff";
+  MenuTitleBack = (fpixmap, "/home/makaba/sqralbi02.tif", "#000000");
+  MenuDisabledColor = "#7f7f7f";
+  IconTitleBack = "#000000";
+  FTitleBack = (solid, "#000000");
+  ClipTitleFont = "Sans:bold:pixelsize=10";
+  ClipTitleColor = "#000000";
+  FrameFocusedBorderColor = "#000000";
+  IconTitleFont = "Sans:pixelsize=9";
+  HighlightColor = "#ffffff";
+  WindowTitleFont = "Sans:weight=200:pixelsize=12";
+  MenuTextBack = (solid, "rgb:aa/aa/aa");
+  LargeDisplayFont = "Sans:pixelsize=24";
+  CClipTitleColor = "#616161";
+  MenuStyle = normal;
+  ResizebarBack = (solid, "rgb:aa/aa/aa");
+  IconTitleColor = "#ffffff";
+  TitleJustify = center;
+  MenuTextColor = "#000000";
+  PTitleBack = (solid, "#000000");
+  IconBack = (cpixmap, "/home/makaba/sqralbi02.tif", "#000000");
+  MenuTitleColor = "#ffffff";
+  UTitleColor = "#000000";
+  MenuTitleFont = "Sans:bold:pixelsize=12";
+  UTitleBack = (solid, "#aaaaaa");
+  PTitleColor = "#ffffff";
+  MenuTextFont = "Sans:pixelsize=12";
+  WorkspaceBack = (
+    spixmap,
+    "/home/makaba/GNUstep/Library/WindowMaker/Backgrounds/vaporwavejazz.jpg",
+    "#333333"
+  );
+  FrameSelectedBorderColor = "#ffffff";
+  HighlightTextColor = "#000000";
+}

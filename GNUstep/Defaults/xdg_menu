@@ -1,0 +1,43 @@
+"Applications" MENU
+ "Accessories" MENU
+  "AppImageUpdate" EXEC /home/makaba/.local/bin/AppImageUpdate-x86_64.AppImage
+  "ClipIt" EXEC clipit
+  "Neovim" EXEC kitty -e kitty -e nvim 
+ "Accessories" END
+ "Development" MENU
+  "Geany" EXEC geany 
+ "Development" END
+ "Graphics" MENU
+  "Cura (4.4.1)" EXEC /home/makaba/.local/bin/Ultimaker_Cura-4.4.1.AppImage 
+  "GNU Image Manipulation Program" EXEC gimp-2.10 
+ "Graphics" END
+ "Multimedia" MENU
+  "Nicotine-Plus" EXEC nicotine
+  "PulseAudio Volume Control" EXEC pavucontrol
+  "Syncplay" EXEC /home/makaba/.local/bin/Syncplay-1.6.4a-x86_64.AppImage 
+  "mpv Media Player" EXEC mpv --player-operation-mode=pseudo-gui -- 
+ "Multimedia" END
+ "Network" MENU
+  "Deezloader Remix (4.3.1.20200123.1)" EXEC /home/makaba/.local/bin/Deezloader_Remix_4.3.1-x86_64.AppImage
+  "Discord" EXEC /home/makaba/.local/bin/discord-stable-0.0.9-x86_64.AppImage
+  "Firefox Web Browser" EXEC ~/.local/bin/firefoxnotb firefox
+  "Telegram Desktop" EXEC /home/makaba/.local/bin/Telegram/Telegram -- 
+  "Thunderbird" EXEC thunderbird 
+ "Network" END
+ "Office" MENU
+  "Zathura" EXEC zathura 
+ "Office" END
+ "Other" MENU
+  "Into the Breach" EXEC env WINEPREFIX="/home/makaba/.wine" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/makaba/.wine/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/Into\\ the\\ Breach\\ [GOG.com]/Into\\ the\\ Breach.lnk
+  "SoulseekQt" EXEC kitty -e /home/makaba/.local/bin/SoulseekQt-2018-1-30-64bit.AppImage 
+  "Uninstall Into the Breach" EXEC env WINEPREFIX="/home/makaba/.wine" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/makaba/.wine/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/Into\\ the\\ Breach\\ [GOG.com]/Uninstall\\ Into\\ the\\ Breach.lnk
+ "Other" END
+ "Settings" MENU
+  "Customize Look and Feel" EXEC lxappearance
+  "Desktop Preferences" EXEC pcmanfm --desktop-pref
+ "Settings" END
+ "System" MENU
+  "File Manager PCManFM" EXEC pcmanfm 
+  "Htop" EXEC kitty -e htop
+ "System" END
+"Applications" END

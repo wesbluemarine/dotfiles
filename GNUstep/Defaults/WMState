@@ -1,0 +1,218 @@
+{
+  Dock = {
+    AutoRaiseLower = No;
+    Applications = (
+      {
+        Forced = No;
+        Name = Logo.WMDock;
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,0";
+        Lock = Yes;
+        Command = "/usr/bin/WPrefs";
+      },
+      {
+        Forced = No;
+        Name = "/home/makaba/\\.wmtime-1\\.4/dockapps-7d1ef92/wmtime./home/makaba/\\.wmtime-1\\.4/dockapps-7d1ef92/wmtime";
+        DropCommand = "/home/makaba/.wmtime-1.4/dockapps-7d1ef92/wmtime %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,1";
+        Lock = Yes;
+        PasteCommand = "/home/makaba/.wmtime-1.4/dockapps-7d1ef92/wmtime %s";
+        Command = "/home/makaba/.wmtime-1.4/dockapps-7d1ef92/wmtime";
+      },
+      {
+        Forced = No;
+        Name = pcmanfm.Pcmanfm;
+        DropCommand = "pcmanfm %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,3";
+        Lock = Yes;
+        PasteCommand = "pcmanfm %s";
+        Command = pcmanfm;
+      },
+      {
+        Forced = No;
+        Name = firefox.Firefox;
+        DropCommand = "firefox %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,5";
+        Lock = Yes;
+        PasteCommand = "firefox %s";
+        Command = "/home/makaba/.local/bin/firefoxnotb";
+      },
+      {
+        Forced = No;
+        Name = Telegram.TelegramDesktop;
+        DropCommand = "/home/makaba/.local/bin/Telegram/Telegram -- %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,6";
+        Lock = Yes;
+        PasteCommand = "/home/makaba/.local/bin/Telegram/Telegram -- %s";
+        Command = "/home/makaba/.local/bin/Telegram/Telegram --";
+      },
+      {
+        Forced = No;
+        Name = Mail.Thunderbird;
+        DropCommand = "thunderbird %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,4";
+        Lock = Yes;
+        PasteCommand = "thunderbird %s";
+        Command = thunderbird;
+      },
+      {
+        Forced = No;
+        Name = "st-256color.st-256color";
+        DropCommand = "/home/makaba/.st-0.8.2/st -e tmux %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,2";
+        Lock = Yes;
+        PasteCommand = "/home/makaba/.st-0.8.2/st -e tmux %s";
+        Command = "/home/makaba/.st-0.8.2/st -e tmux";
+      }
+    );
+    Applications1080 = (
+      {
+        Forced = No;
+        Name = Logo.WMDock;
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,0";
+        Lock = Yes;
+        Command = "/usr/bin/WPrefs";
+      },
+      {
+        Forced = No;
+        Name = "/home/makaba/\\.wmtime-1\\.4/dockapps-7d1ef92/wmtime./home/makaba/\\.wmtime-1\\.4/dockapps-7d1ef92/wmtime";
+        DropCommand = "/home/makaba/.wmtime-1.4/dockapps-7d1ef92/wmtime %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,1";
+        Lock = Yes;
+        PasteCommand = "/home/makaba/.wmtime-1.4/dockapps-7d1ef92/wmtime %s";
+        Command = "/home/makaba/.wmtime-1.4/dockapps-7d1ef92/wmtime";
+      },
+      {
+        Forced = No;
+        Name = pcmanfm.Pcmanfm;
+        DropCommand = "pcmanfm %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,3";
+        Lock = Yes;
+        PasteCommand = "pcmanfm %s";
+        Command = pcmanfm;
+      },
+      {
+        Forced = No;
+        Name = firefox.Firefox;
+        DropCommand = "firefox %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,5";
+        Lock = Yes;
+        PasteCommand = "firefox %s";
+        Command = "/home/makaba/.local/bin/firefoxnotb";
+      },
+      {
+        Forced = No;
+        Name = Telegram.TelegramDesktop;
+        DropCommand = "/home/makaba/.local/bin/Telegram/Telegram -- %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,6";
+        Lock = Yes;
+        PasteCommand = "/home/makaba/.local/bin/Telegram/Telegram -- %s";
+        Command = "/home/makaba/.local/bin/Telegram/Telegram --";
+      },
+      {
+        Forced = No;
+        Name = Mail.Thunderbird;
+        DropCommand = "thunderbird %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,4";
+        Lock = Yes;
+        PasteCommand = "thunderbird %s";
+        Command = thunderbird;
+      },
+      {
+        Forced = No;
+        Name = "st-256color.st-256color";
+        DropCommand = "/home/makaba/.st-0.8.2/st -e tmux %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,2";
+        Lock = Yes;
+        PasteCommand = "/home/makaba/.st-0.8.2/st -e tmux %s";
+        Command = "/home/makaba/.st-0.8.2/st -e tmux";
+      }
+    );
+    Lowered = Yes;
+    Position = "-64,0";
+  };
+  Clip = {
+    Forced = No;
+    Name = Logo.WMClip;
+    DropCommand = "wmsetbg -u -t %d";
+    BuggyApplication = No;
+    AutoLaunch = No;
+    Position = "1856,1016";
+    Lock = No;
+    Command = "-";
+  };
+  Drawers = ();
+  Workspaces = (
+    {
+      Clip = {
+        AutoRaiseLower = No;
+        AutoCollapse = No;
+        Applications = ();
+        Collapsed = No;
+        AutoAttractIcons = No;
+        Lowered = Yes;
+      };
+      Name = Main;
+    },
+    {
+      Clip = {
+        AutoRaiseLower = No;
+        AutoCollapse = No;
+        Applications = ();
+        Collapsed = No;
+        AutoAttractIcons = No;
+        Lowered = Yes;
+      };
+      Name = Games;
+    },
+    {
+      Clip = {
+        AutoRaiseLower = No;
+        AutoCollapse = No;
+        Applications = ();
+        Collapsed = No;
+        AutoAttractIcons = No;
+        Lowered = Yes;
+      };
+      Name = "Workspace 3";
+    },
+    {
+      Clip = {
+        AutoRaiseLower = No;
+        AutoCollapse = No;
+        Applications = ();
+        Collapsed = No;
+        AutoAttractIcons = No;
+        Lowered = Yes;
+      };
+      Name = "Workspace 4";
+    }
+  );
+}

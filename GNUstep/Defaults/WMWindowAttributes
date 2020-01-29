@@ -1,0 +1,66 @@
+{
+  discord.discord = {
+    AlwaysUserIcon = Yes;
+    Icon = discord.png;
+    EmulateAppIcon = Yes;
+  };
+  pcmanfm.Pcmanfm = {
+    AlwaysUserIcon = Yes;
+    Icon = "FileManager-ISO-48x48.tiff";
+  };
+  firefox.Firefox = {
+    Icon = default48.png;
+  };
+  Alacritty.Alacritty = {
+    AlwaysUserIcon = Yes;
+    EmulateAppIcon = Yes;
+    Icon = "Term-Black_with_logo-48x48.tif";
+  };
+  kitty.kitty = {
+    AlwaysUserIcon = Yes;
+    EmulateAppIcon = Yes;
+    Icon = "Term-Black_with_logo-48x48.tif";
+  };
+  syncplay.syncplay = {
+    Icon = syncplay.png;
+  };
+  thunderbird.Thunderbird = {
+    NoAppIcon = Yes;
+    Icon = "Mail-48x48.tif";
+    StartHidden = Yes;
+  };
+  "st-256color.st-256color" = {
+    AlwaysUserIcon = Yes;
+    EmulateAppIcon = Yes;
+    Icon = "Term-Black_with_logo-48x48.tif";
+  };
+  Mail.Thunderbird = {
+    AlwaysUserIcon = Yes;
+    EmulateAppIcon = Yes;
+    Icon = "Mail-48x48.tif";
+    StartHidden = Yes;
+  };
+  Logo.WMDock = {
+    Icon = GNUstep.tiff;
+  };
+  Navigator.Firefox = {
+    NoTitlebar = Yes;
+    StartMaximized = Yes;
+    NoBorder = Yes;
+    AlwaysUserIcon = Yes;
+    Icon = default48.png;
+    NoResizebar = Yes;
+  };
+  Msgcompose.Thunderbird = {
+    AlwaysUserIcon = Yes;
+    Icon = "Mail-48x48.tif";
+  };
+  Telegram.TelegramDesktop = {
+    Icon = "/home/makaba/.local/share/icons/hicolor/48x48/apps/telegram.png";
+  };
+  gl.mpv = {
+    AlwaysUserIcon = Yes;
+    Icon = mpv.png;
+    EmulateAppIcon = Yes;
+  };
+}
