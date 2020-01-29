@@ -5,6 +5,7 @@
   MenuDisabledColor = "#7f7f7f";
   CycleIgnoreMinimized = NO;
   LastWorkspaceKey = None;
+  IconTitleBack = "#000000";
   PixmapPath = (
     "/home/makaba/GNUstep/Library/WindowMaker/Pixmaps",
     "/home/makaba/GNUstep/Library/WindowMaker/Backgrounds",
@@ -13,7 +14,6 @@
     "/usr/share/WindowMaker/Backgrounds",
     "/usr/share/pixmaps"
   );
-  IconTitleBack = "#000000";
   MoveToWorkspace9Key = None;
   FTitleBack = (solid, "#000000");
   MoveToPrevWorkspaceLayerKey = None;
@@ -32,22 +32,22 @@
   EnableWorkspacePager = NO;
   WindowShortcut4Key = None;
   NoWindowOverDock = YES;
-  OmnipresentKey = None;
   WorkspaceBack = (
     spixmap,
     "/home/makaba/GNUstep/Library/WindowMaker/Backgrounds/vaporwavejazz.jpg",
     "#333333"
   );
-  LBCMaximizeKey = None;
-  SnapEdgeDetect = 1;
+  OmnipresentKey = None;
   HighlightTextColor = "#000000";
+  SnapEdgeDetect = 1;
+  LBCMaximizeKey = None;
   WindowShortcut9Key = None;
   HelpBalloons = NO;
   WindowSnapping = YES;
   KeepAtBottomKey = None;
-  MoveResizeKey = None;
-  KeepOnTopKey = None;
   AutoArrangeIcons = YES;
+  KeepOnTopKey = None;
+  MoveResizeKey = None;
   ClipTitleColor = "#000000";
   AppIconBalloons = NO;
   MoveHalfMaximizedWindowsBetweenScreens = NO;
@@ -88,10 +88,10 @@
   OpaqueMoveResizeKeyboard = NO;
   MoveToLastWorkspaceKey = None;
   GroupNextKey = None;
-  Attraction = NO;
-  SingleClickLaunch = NO;
   MenuTextColor = "#000000";
-  IconBack = (cpixmap, "/home/makaba/sqralbi02.tif", "#000000");
+  SingleClickLaunch = NO;
+  Attraction = NO;
+  IconBack = (cpixmap, sqralbi02.tif, "#000000");
   DisableBlinking = NO;
   AntialiasedText = YES;
   MoveToWorkspace5Key = None;
@@ -107,8 +107,8 @@
   HighlightColor = "#ffffff";
   GroupPrevKey = None;
   PointerWithHalfMaxWindows = NO;
-  MoveToWorkspace3Key = None;
   MinimizeAllKey = "Shift+Mod1+M";
+  MoveToWorkspace3Key = None;
   CClipTitleColor = "#616161";
   WindowShortcut5Key = None;
   HideOthersKey = "Shift+Mod1+H";
@@ -125,14 +125,14 @@
     "/home/makaba/.icons/Apps",
     "/home/makaba/.local/share/icons/hicolor/48x48/apps"
   );
-  WindowShortcut6Key = None;
   PTitleBack = (solid, "#000000");
+  WindowShortcut6Key = None;
   UTitleColor = "#000000";
-  ViKeyMenus = NO;
   BounceAppIconsWhenUrgent = YES;
-  CirculateRaise = NO;
-  HighlightActiveApp = YES;
+  ViKeyMenus = NO;
   UTitleBack = (solid, "#aaaaaa");
+  HighlightActiveApp = YES;
+  CirculateRaise = NO;
   PTitleColor = "#ffffff";
   MoveToWorkspace4Key = None;
   RTCMaximizeKey = None;
