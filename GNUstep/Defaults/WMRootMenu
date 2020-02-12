@@ -1,11 +1,12 @@
 (
   WindowMaker,
+  (Run..., SHORTCUT, "Mod1+F2", EXEC, "%A(Run,Type command:)"),
+  (Terminal, SHORTCUT, "Shift+Mod1+Return", EXEC, kitty),
   (
     "Menu Refresh",
     SHEXEC,
     "xdgmenumaker -f windowmaker > ~/GNUstep/Defaults/xdg_menu && sed -i \"s/xterm/kitty/g\" ~/GNUstep/Defaults/xdg_menu"
   ),
-  (Terminal, SHORTCUT, "Shift+Mod1+Return", EXEC, kitty),
   (Applications, OPEN_MENU, "~/GNUstep/Defaults/xdg_menu"),
   (
     WindowMaker,
@@ -43,29 +44,27 @@
         "geticonset -t $HOME/GNUstep/Library/WindowMaker/IconSets/\"%a(IconSet name)\""
       )
     ),
-    (Run..., EXEC, "%a(Run,Type command to run:)"),
     ("Save session", SAVE_SESSION),
     ("Clear session", CLEAR_SESSION),
     (Preferences, EXEC, WPrefs),
     (Restart, RESTART),
     (Exit, SHORTCUT, "Shift+Mod1+BackSpace", EXIT, QUICK)
   ),
-  (Screenshot, SHORTCUT, Print, EXEC, "/home/makaba/.local/bin/screenshot"),
   (
-    "Screenshot Selection",
+    "Screenshot Save",
     SHORTCUT,
-    "Mod1+Print",
-    EXEC,
-    "/home/makaba/.local/bin/screenshot_selection"
+    Print,
+    SHEXEC,
+    "maim -s ~/Pictures/Screenshots/screenshot_$(date +%F-%T).png && paplay ~/.sounds/camera-shutter.oga"
   ),
   (
-    "Screenshot Window",
+    "Screenshot to Clipboard",
     SHORTCUT,
-    "Shift+Print",
-    EXEC,
-    "/home/makaba/.local/bin/screenshot_window"
+    "Control+Shift+Print",
+    SHEXEC,
+    "maim -s | xclip -selection clipboard -t image/png && paplay ~/.sounds/camera-shutter.oga"
   ),
-  (Sleep, EXEC, "sudo zzz"),
-  (Reboot, EXEC, "sudo reboot"),
-  (Poweroff, EXEC, "sudo poweroff")
+  (Sleep, EXEC, "systemctl suspend"),
+  (Reboot, EXEC, reboot),
+  (Poweroff, EXEC, poweroff)
 )
