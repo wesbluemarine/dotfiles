@@ -1,1 +1,1 @@
-dbus-launch --sh-syntax --exit-with-session ~/.local/bin/startdw
+dbus-launch --sh-syntax --exit-with-session ~/.local/bin/startdwm
