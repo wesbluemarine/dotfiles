@@ -4,7 +4,6 @@ hsetroot -center ~/Pictures/Wallpapers/canaletto.png
 ~/.script/dwm_status &
 ~/.script/clipmenu/clipmenud &
 ~/.script/xvisbell/xvisbell &
-compton &
 
 while true; do
 »···# Log stderror to a file
