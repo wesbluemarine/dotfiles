@@ -1,5 +1,4 @@
 #!/bin/bash
-
 xetroot -solid "#696969"
 ~/.local/bin/dwm_status &
 ~/.local/bin/clipmenu/clipmenud &
