@@ -1,5 +1,5 @@
 #!/bin/bash
-xetroot -solid "#696969"
+xsetroot -solid "#8A8082"
 ~/.local/bin/dwm_status &
 ~/.local/bin/clipmenu/clipmenud &
 
