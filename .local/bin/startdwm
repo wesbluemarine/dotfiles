@@ -1,8 +1,8 @@
 #!/bin/bash
 
 xetroot -solid "#696969"
-~/.script/dwm_status &
-~/.script/clipmenu/clipmenud &
+~/.local/bin/dwm_status &
+~/.local/bin/clipmenu/clipmenud &
 
 while true; do
 # Log stderror to a file
