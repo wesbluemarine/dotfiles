@@ -7,5 +7,5 @@ while true; do
 # Log stderror to a file
   ~/.dwm-6.2/dwm 2> ~/.dwm.log
 #No error logging
-  #~/.dwm/dwm >/dev/null 2>&1
+  #~/.dwm-6.2/dwm >/dev/null 2>&1
 done
