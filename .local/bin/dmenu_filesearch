@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+fdfind . /home/makaba | sed -e "s/'/\\\'/g" -e 's/\ /\\ /g' | sort -f | dmenu -l 0 -i -fn Iosevka:size=9 -nb '#003030' -sb '#006060' -p 'Find:' | xargs -r xdg-open
