@@ -21,18 +21,17 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-alias dwm_status="~/.script/dwm_status"
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
 alias suspend="systemctl suspend"
-alias logout="killall xinit"
+alias logout="pkill xinit"
 alias reboot="systemctl reboot"
 alias poweroff="systemctl poweroff"
-alias st="~/.st-0.8.2/st -e tmux"
-alias nmanager="~/.script/networkmanager-dmenu/networkmanager_dmenu  -fn "terminus:pixelsize=13""
-alias firefox="~/.local/bin/firefox/firefox"
 alias mitology="mpv  --profile=pseudo-gui http://onair15.xdevel.com:9120/;"
-alias cura="~/.local/bin/Cura-4.0.0-BETA.AppImage"
-alias icesl="~/.local/bin/icesl/bin/IceSL-slicer"
-alias webcam="mpv av://v4l2:/dev/video0" 
-alias screencast="ffmpeg -y -f -i -r 60 -f x11grab -s 1920x1080 -i {$DISPLAY} -c:v libx264rgb -crf 0 -preset:v ultrafast -c:a pcm_s16le -af aresample=async=1:first_pts=0 -y /tmp/out.mkv; mv --backup=t /tmp/out.mkv ~/Videos/out.mkv"
-alias screencastmultiaudio="ffmpeg -video_size 1920x1080 -framerate 60 -thread_queue_size 512 -f x11grab -i :0.0+0,0 -thread_queue_size 512 -f pulse -ac 2 -ar 48000 -i alsa_input.usb-046d_081d_43561990-00.analog-mono -thread_queue_size 512 -f pulse -ac 2 -ar 44100 -i alsa_output.pci-0000_00_1f.3.hdmi-stereo.monitor -filter_complex amix=inputs=2 -vcodec libx264rgb -crf 18 -preset:v ultrafast -acodec libmp3lame -ar 44100 -q:a 1 -pix_fmt yuv420p -y /tmp/out.mkv; mv --backup=t /tmp/out.mkv ~/Videos/out.mkv"
-alias screencastaudio="ffmpeg -video_size 1920x1080 -framerate 60 -thread_queue_size 512 -f x11grab -i :0.0+0,0 -thread_queue_size 512 -f pulse -ac 2 -ar 44100 -i alsa_output.pci-0000_00_1f.3.hdmi-stereo.monitor -vcodec libx264rgb -crf 18 -preset:v ultrafast -acodec libmp3lame -ar 44100 -q:a 1 -pix_fmt yuv420p -y /tmp/out.mkv; mv --backup=t /tmp/out.mkv ~/Videos/out.mkv"
+alias steam="flatpak run com.valvesoftware.Steam"
+alias blender="flatpak run org.blender.Blender"
+alias jitsi="~/.local/bin/jitsi-meet-x86_64.AppImage --no-sandbox"
+alias octoprint="~/OctoPrint/venv/bin/octoprint serve"
