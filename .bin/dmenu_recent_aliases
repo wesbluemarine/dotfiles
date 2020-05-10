@@ -1,8 +1,10 @@
 #!/bin/bash
 cache=/tmp/dmenu_cache
-freq=~/.dmenu_history
+freq=/tmp/dmenu_history
 aliases=~/.profile
 source $aliases
+
+touch /tmp/dmenu_history
 
 (compgen -a; compgen -c | grep -vxF "$(compgen -a)") | sort | tail -n +10 > $cache
 
@@ -17,7 +19,7 @@ if ! [ "$cmd" == "" ] && ! [ "$(grep `echo $cmd | tr -d ':;'` $cache)" == "" ]; 
     fi
 
     if [[ $cmd == *';'* ]]; then
-        cmdexec="~/.stterm-0.6/st -e $cmdexec"
+        cmdexec="st -e $cmdexec"
     fi
     if [[ $cmd == *':'* ]]; then
         cmdexec="xdotool mousemove - 1 mousemove restore; gksu '$cmdexec'"
