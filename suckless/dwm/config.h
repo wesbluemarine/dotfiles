@@ -5,13 +5,13 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "iosevka:pixelsize=11" };
-static const char dmenufont[]       = "iosevka:pixelsize=11";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
+static const char *fonts[]          = { "IosevkaNerdFont-Complete:size=9" };
+static const char dmenufont[]       = "IosevkaNerdFont-Complete:size=9";
+static const char col_gray1[]       = "#003030";
+static const char col_gray2[]       = "#000000";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+static const char col_cyan[]        = "#006060";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -28,7 +28,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "Skype",  NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "mpv",      NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -56,13 +56,16 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "/home/makaba/.local/bin/dmenu_recent_aliases", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "/home/makaba/.st-0.8.2/st", "-e", "tmux", NULL };
+static const char *dmenucmd[] = { "dmenu_recent_aliases", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *clpmncmd[] = { "/home/makaba/.local/bin/clipmenu/clipmenu", "-l", "0", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenusrc[] = { "dmenu_filesearch", NULL };
+static const char *termcmd[]  = { "st", "-e", "tmux", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{      0,                       XK_Print,  spawn,          SHCMD("scrot -q 100 '%Y-%m-%d-%H-%M-%S.png' -e 'mv $f $m ~/Pictures/Screenshots/'") },
-	{      0,                       XK_Insert,  spawn,          SHCMD("~/.script/clipmenu/clipmenu  -l 0 -i -fn 'iosevka:pixelsize=11'") },
+	{      0,                       XK_Print,  spawn,          SHCMD("screenshot") },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = clpmncmd } },
+	{ MODKEY,                       XK_s,      spawn,          {.v = dmenusrc } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
