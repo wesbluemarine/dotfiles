@@ -5,8 +5,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "IosevkaNerdFont-Complete:size=9" };
-static const char dmenufont[]       = "IosevkaNerdFont-Complete:size=9";
+static const char *fonts[]          = { "JetBrainsMono:pixelsize=15" };
+static const char dmenufont[]       = "JetBrainsMono:pixelsize=15";
 static const char col_gray1[]       = "#003030";
 static const char col_gray2[]       = "#000000";
 static const char col_gray3[]       = "#bbbbbb";
@@ -56,7 +56,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_recent_aliases", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_desktop", NULL };
 static const char *clpmncmd[] = { "/home/makaba/.local/bin/clipmenu/clipmenu", "-l", "0", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *dmenusrc[] = { "dmenu_filesearch", NULL };
 static const char *termcmd[]  = { "st", "-e", "tmux", NULL };
@@ -117,4 +117,3 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-
