@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+j4-dmenu-desktop --dmenu="dmenu -i -m '0' -fn 'JetBrainsMono:pixelsize=15' -nb '#003030' -nf '#bbbbbb' -sb '#006060' -sf '#eeeeee'"
