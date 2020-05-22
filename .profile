@@ -25,13 +25,3 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-
-alias suspend="systemctl suspend"
-alias logout="pkill xinit"
-alias reboot="systemctl reboot"
-alias poweroff="systemctl poweroff"
-alias mitology="mpv  --profile=pseudo-gui http://onair15.xdevel.com:9120/;"
-alias steam="flatpak run com.valvesoftware.Steam"
-alias blender="flatpak run org.blender.Blender"
-alias jitsi="~/.local/bin/jitsi-meet-x86_64.AppImage --no-sandbox"
-alias octoprint="~/OctoPrint/venv/bin/octoprint serve"
