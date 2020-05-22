@@ -1,5 +1,6 @@
 let &t_Co=256
 set t_Co=256
+set termguicolors
 set title
 set number
 set relativenumber
@@ -33,7 +34,7 @@ set tabstop=4
 set noswapfile
 
 syntax on
-colorscheme base16-solarized-light
+colorscheme gruvbox
 set background=light
 set undofile
 set undodir=/tmp
@@ -50,19 +51,19 @@ if exists('$TMUX')
     autocmd VimLeave * call system("tmux setw automatic-rename")
 endif
 
-if has("gui_running")
-  colorscheme base16-solarized-light
-  endif
-
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
+Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
+let g:gruvbox_contrast_dark = 'hard'
+
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
+      \ 'colorscheme': 'gruvbox',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'gitbranch', 'readonly', 'absolutepath', 'modified' ] ]
       \ },
       \ 'component_function': {
       \   'gitbranch': 'fugitive#head'
