@@ -1,7 +1,9 @@
 #!/bin/bash
-xsetroot -solid "#8A8082"
+hsetroot -solid "#FBF1C7"
 ~/.local/bin/dwm_status &
 ~/.local/bin/clipmenu/clipmenud &
+compton --config ~/.config/compton/compton.conf &
+redshift &
 
 while true; do
 # Log stderror to a file
