@@ -1,7 +1,6 @@
 #!/bin/bash
 hsetroot -solid "#FBF1C7"
 ~/.local/bin/dwm_status &
-~/.local/bin/clipmenu/clipmenud &
 compton --config ~/.config/compton/compton.conf &
 redshift &
 
