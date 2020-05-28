@@ -5,8 +5,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "JetBrainsMono:pixelsize=15" };
-static const char dmenufont[]       = "JetBrainsMono:pixelsize=15";
+static const char *fonts[]          = { "JetBrainsMono:medium:pixelsize=14" };
+static const char dmenufont[]       = "JetBrainsMono:medium:pixelsize=14";
 static const char col_gray1[]       = "#003030";
 static const char col_gray2[]       = "#000000";
 static const char col_gray3[]       = "#bbbbbb";
@@ -26,9 +26,10 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "mpv",      NULL,       NULL,       0,            1,           -1 },
+	/* class      instance    title                       tags mask     isfloating    monitor */
+	{ "Firefox",  NULL,       NULL,                       1 << 8,       0,            -1 },
+	{ "Firefox",  NULL,       "Picture-in-Picture",       0,            ~0,           -1 },
+	{ "mpv",      NULL,       NULL,                       0,            1,            1 },
 };
 
 /* layout(s) */
@@ -59,13 +60,16 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_desktop", NULL };
 static const char *clpmncmd[] = { "/home/makaba/.local/bin/clipmenu/clipmenu", "-l", "0", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *dmenusrc[] = { "dmenu_filesearch", NULL };
+static const char *dbrowse[] = { "dmenu_filer", NULL };
 static const char *termcmd[]  = { "st", "-e", "tmux", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{      0,                       XK_Print,  spawn,          SHCMD("screenshot") },
+	{      0,                       XK_Print,  spawn,          SHCMD("screenshot_save") },
+	{ ShiftMask,                    XK_Print,  spawn,          SHCMD("screenshot") },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = clpmncmd } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = dmenusrc } },
+	{ MODKEY,                       XK_o,      spawn,          {.v = dbrowse } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
@@ -117,3 +121,4 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
+
