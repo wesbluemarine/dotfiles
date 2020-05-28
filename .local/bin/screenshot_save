@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+maim | xclip -selection clipboard -t image/png; xclip -selection clipboard -t image/png -o > ~/Pictures/Screenshots/$(date +%F-%T).png; paplay ~/.sounds/camera-shutter.oga &
+
