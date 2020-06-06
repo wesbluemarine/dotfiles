@@ -1,0 +1,34 @@
+#!/bin/bash
+
+print_date(){
+	date "+%a %d-%m-%Y %T%:::z"
+}
+
+print_disk() {
+	echo $(printf "%s %s\n" "$(df -h "/" | awk ' /[0-9]/ {print $3 "/" $2}')")
+}
+
+print_mem(){
+	echo $(free --mebi | sed -n '2{p;q}' | awk '{printf ("%2.2fGiB/%2.2fGiB\n", ( $3 / 1024), ($2 / 1024))}')
+}
+
+print_network(){
+	logfile="${XDG_CACHE_HOME:-$HOME/.cache}/netlog"
+	[ -f "$logfile" ] || echo "0 0" > "$logfile"
+	read -r rxprev txprev < "$logfile"
+	rxcurrent="$(($(paste -d '+' /sys/class/net/enp5s0/statistics/rx_bytes)))"
+	txcurrent="$(($(paste -d '+' /sys/class/net/enp5s0/statistics/tx_bytes)))"
+	printf "%dKiB %dKiB\\n" "$(((rxcurrent-rxprev)/1024))" "$(((txcurrent-txprev)/1024))"
+	echo "$rxcurrent $txcurrent" > "$logfile"
+}
+
+print_temp(){
+	test -f /sys/class/thermal/thermal_zone0/temp || return 0
+	echo $(head -c 2 /sys/class/thermal/thermal_zone2/temp)C
+}
+
+while true
+do
+	xsetroot -name "  $(print_network)   $(print_disk)   $(print_temp) $(print_mem)MB   $(print_date)"
+	sleep 1
+done
