@@ -31,8 +31,26 @@ print_temp(){
 	echo $(head -c 2 /sys/class/thermal/thermal_zone2/temp)C
 }
 
+print_volume() {
+	volume="$(amixer get Master | tail -n1 | sed -r 's/.*\[(.*)%\].*/\1/')"
+	if test "$volume" -gt 0
+	then
+		echo -e " ${volume}"
+	else
+		echo -e ""
+	fi
+}
+
+print_volstat() {
+	volstat="$(pacmd list-sinks | awk '/muted/ { print $2 }')"
+	if [[ $volstat =~ "yes" ]]
+	then
+		echo -e "(MUTED)"
+	fi
+}
+
 while true
 do
-	xsetroot -name "  $(print_network)   $(print_disk)   $(print_cpu_usage) $(print_temp) $(print_mem)MB   $(print_date)"
+	xsetroot -name "  $(print_network)   $(print_disk)   $(print_cpu_usage) $(print_temp) $(print_mem)MB  $(print_volume)$(print_volstat)   $(print_date)"
 	sleep 1
 done
