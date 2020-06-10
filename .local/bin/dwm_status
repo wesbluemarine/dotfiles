@@ -51,6 +51,6 @@ print_volstat() {
 
 while true
 do
-	xsetroot -name "  $(print_network)   $(print_disk)   $(print_cpu_usage) $(print_temp) $(print_mem)MB  $(print_volume)$(print_volstat)   $(print_date)"
+	xsetroot -name "  $(print_network)   $(print_disk)   $(print_cpu_usage) $(print_temp) $(print_mem)  $(print_volume)$(print_volstat)   $(print_date)"
 	sleep 1
 done
