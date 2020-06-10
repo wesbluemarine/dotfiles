@@ -52,6 +52,7 @@ if exists('$TMUX')
 endif
 
 call plug#begin('~/.vim/plugged')
+Plug 'ap/vim-css-color'
 Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'morhetz/gruvbox'
