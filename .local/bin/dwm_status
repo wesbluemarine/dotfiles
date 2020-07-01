@@ -22,7 +22,7 @@ print_network(){
 	read -r rxprev txprev < "$logfile"
 	rxcurrent="$(($(paste -d '+' /sys/class/net/enp5s0/statistics/rx_bytes)))"
 	txcurrent="$(($(paste -d '+' /sys/class/net/enp5s0/statistics/tx_bytes)))"
-	printf "%dKiB %dKiB\\n" "$(((rxcurrent-rxprev)/1024))" "$(((txcurrent-txprev)/1024))"
+	printf " %dKiB  %dKiB\\n" "$(((rxcurrent-rxprev)/1024))" "$(((txcurrent-txprev)/1024))"
 	echo "$rxcurrent $txcurrent" > "$logfile"
 }
 
@@ -51,6 +51,6 @@ print_volstat() {
 
 while true
 do
-	xsetroot -name "  $(print_network)   $(print_disk)   $(print_cpu_usage) $(print_temp) $(print_mem)  $(print_volume)$(print_volstat)   $(print_date)"
+	xsetroot -name " $(print_network)   $(print_disk)   $(print_cpu_usage) $(print_temp) $(print_mem)  $(print_volume)$(print_volstat)   $(print_date)"
 	sleep 1
 done
