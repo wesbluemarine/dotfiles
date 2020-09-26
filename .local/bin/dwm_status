@@ -5,7 +5,7 @@ print_cpu_usage() {
 }
 
 print_date(){
-	date "+%a %d-%m-%Y %T%:::z"
+	date "+%a %d %b %H:%M"
 }
 
 print_disk() {
@@ -13,7 +13,7 @@ print_disk() {
 }
 
 print_mem(){
-	echo $(free --mebi | sed -n '2{p;q}' | awk '{printf ("%2.2fGiB/%2.2fGiB\n", ( $3 / 1024), ($2 / 1024))}')
+	echo $(free --mebi | sed -n '2{p;q}' | awk '{printf ("%2.2fG/%2.2fG\n", ( $3 / 1024), ($2 / 1024))}')
 }
 
 print_network(){
@@ -22,31 +22,31 @@ print_network(){
 	read -r rxprev txprev < "$logfile"
 	rxcurrent="$(($(paste -d '+' /sys/class/net/enp5s0/statistics/rx_bytes)))"
 	txcurrent="$(($(paste -d '+' /sys/class/net/enp5s0/statistics/tx_bytes)))"
-	printf " %dKiB  %dKiB\\n" "$(((rxcurrent-rxprev)/1024))" "$(((txcurrent-txprev)/1024))"
+	printf " %dK  %dK\\n" "$(((rxcurrent-rxprev)/1024))" "$(((txcurrent-txprev)/1024))"
 	echo "$rxcurrent $txcurrent" > "$logfile"
 }
 
 print_temp(){
 	test -f /sys/class/thermal/thermal_zone0/temp || return 0
-	echo $(head -c 2 /sys/class/thermal/thermal_zone2/temp)C
+	echo $(head -c 2 /sys/class/thermal/thermal_zone2/temp)°C
 }
 
-print_volume() {
-	volume="$(amixer get Master | tail -n1 | sed -r 's/.*\[(.*)%\].*/\1/')"
-	if test "$volume" -gt 0
-	then
-		echo -e " ${volume}"
+print_volume(){
+	vol="$(amixer get Master | tail -n1 | sed -r 's/.*\[(.*)%\].*/\1/')"
+	mute="$(pacmd list-sinks | awk '/muted/ { print $2 }')"
+	if [[ "$mute" =~ "yes" ]]; then
+		icon= 
 	else
-		echo -e ""
+		if [[ "$vol" -lt "40" ]]; then
+			icon=
+		elif [[ "$vol" -gt "39" && "$vol" -lt "69" ]]; then
+			icon= 
+		elif [[ "$vol" -gt "69" ]]; then
+			icon= 
+		fi
 	fi
-}
 
-print_volstat() {
-	volstat="$(pacmd list-sinks | awk '/muted/ { print $2 }')"
-	if [[ $volstat =~ "yes" ]]
-	then
-		echo -e "(MUTED)"
-	fi
+	echo "$icon"
 }
 
 while true
