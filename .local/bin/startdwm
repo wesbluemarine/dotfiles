@@ -1,5 +1,5 @@
 #!/bin/bash
-hsetroot -solid "#FBF1C7"
+hsetroot -solid "#f2e5bc"
 ~/.local/bin/dwm_status &
 compton --config ~/.config/compton/compton.conf &
 redshift &
