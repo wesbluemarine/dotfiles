@@ -34,6 +34,8 @@ set tabstop=4
 set noswapfile
 
 syntax on
+let g:gruvbox_number_column='bg1'
+let g:gruvbox_contrast_light = 'soft'
 colorscheme gruvbox
 set background=light
 set undofile
@@ -57,8 +59,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'morhetz/gruvbox'
 call plug#end()
-
-let g:gruvbox_contrast_dark = 'hard'
 
 let g:lightline = {
       \ 'colorscheme': 'gruvbox',
