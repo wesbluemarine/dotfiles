@@ -1,10 +1,10 @@
 #!/bin/bash
+
+touch /tmp/.dmenu_history &\
 cache=/tmp/dmenu_cache
-freq=/tmp/dmenu_history
+freq=/tmp/.dmenu_history
 aliases=~/.profile
 source $aliases
-
-touch /tmp/dmenu_history
 
 (compgen -a; compgen -c | grep -vxF "$(compgen -a)") | sort | tail -n +10 > $cache
 
