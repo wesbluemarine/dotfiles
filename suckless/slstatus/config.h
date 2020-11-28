@@ -67,8 +67,7 @@ static const struct arg args[] = {
 	{ netspeed_tx, " %sB/s  ", "enp5s0" },
 	{ disk_perc, " %s%%  ", "/" },
 	{ cpu_perc, " %s%% ", NULL	      },
-	{ run_command, "%s°C  " , "head -c 2 /sys/class/thermal/thermal_zone2/temp" },
+	{ temp, "%s°C  " , "/sys/class/thermal/thermal_zone2/temp" },
 	{ ram_perc, " %s%%  ", NULL	      },
-	{ run_command, " %s%%  ", "/bin/sh -c \"amixer get Master | tail -n1 | grep -Po '\\[\\K[^%]*' | head -n1\"" },
 	{ datetime, " %s",           "%a %d %b %H:%M" },
 };
