@@ -67,9 +67,9 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{      0,                       XK_Print,  spawn,          SHCMD("screenshot_save") },
 	{ ShiftMask,                    XK_Print,  spawn,          SHCMD("screenshot_sel") },
-	{ MODKEY,                       XK_F9,     spawn,          SHCMD("pulsemixer --toggle-mute") },
-	{ MODKEY,                       XK_F10,    spawn,          SHCMD("pulsemixer --change-volume -10") },
-	{ MODKEY,                       XK_F11,    spawn,          SHCMD("pulsemixer --change-volume +10") },
+	{ MODKEY,                       XK_F9,     spawn,          SHCMD("/home/makaba/.local/bin/volume.sh mute") },
+	{ MODKEY,                       XK_F10,    spawn,          SHCMD("/home/makaba/.local/bin/volume.sh down") },
+	{ MODKEY,                       XK_F11,    spawn,          SHCMD("/home/makaba/.local/bin/volume.sh up") },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = clpmncmd } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = dmenusrc } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
