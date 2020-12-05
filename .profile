@@ -33,5 +33,5 @@ fi
 alias firefox='~/.firefox/firefox-bin'
 alias logout='pkill dwm'
 alias octoprint='~/OctoPrint/venv/bin/octoprint'
-alias sleep='systemctl suspend'
+alias suspend='systemctl suspend'
 alias steam='flatpak run com.valvesoftware.Steam'
