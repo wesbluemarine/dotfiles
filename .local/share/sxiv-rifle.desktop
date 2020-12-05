@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+NoDisplay=true
+Exec="/home/makaba/.local/bin/sxiv-rifle" %f
+Name=sxiv-rifle
+Icon=sxiv
