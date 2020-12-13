@@ -6,7 +6,7 @@ redshift &
 
 while true; do
 # Log stderror to a file
-  ~/.dwm-6.2/dwm 2> ~/.dwm.log
+  ~/.local/bin/dwm-6.2/dwm 2> ~/.dwm.log
 #No error logging
-  #~/.dwm-6.2/dwm >/dev/null 2>&1
+  #~/.local/bin/dwm-6.2/dwm >/dev/null 2>&1
 done
