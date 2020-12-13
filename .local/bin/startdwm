@@ -1,8 +1,10 @@
 #!/bin/bash
-hsetroot -solid "#f2e5bc"
-~/.local/bin/dwm_status &
+~/.slstatus/slstatus &
+~/.local/bin/xvisbell/xvisbell &
+hsetroot -solid "#f2e5bc" &
 compton --config ~/.config/compton/compton.conf &
 redshift &
+dbus-launch dunst &
 
 while true; do
 # Log stderror to a file
