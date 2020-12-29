@@ -13,6 +13,7 @@ set hlsearch
 set bs=2
 set nobackup
 set clipboard+=unnamedplus
+set mouse=a
 set paste
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
