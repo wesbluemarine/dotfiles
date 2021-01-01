@@ -1,2 +1,7 @@
 #!/usr/bin/env sh
-ffmpeg -y -f -i -r 60 -f x11grab -s 1920x1080 -i ${DISPLAY} -c:v libx264rgb -crf 0 -preset:v ultrafast -c:a pcm_s16le -af aresample=async=1:first_pts=0 out.mkv
+
+if pgrep -x 'ffmpeg' > /dev/null; then
+    pkill -f ffmpeg
+else
+	ffmpeg -y -f -i -r 60 -f x11grab -s 1920x1080 -i ${DISPLAY} -c:v libx264rgb -crf 0 -preset:v ultrafast ~/Videos/Screencast/$(date +%F-%T).mp4
+fi
