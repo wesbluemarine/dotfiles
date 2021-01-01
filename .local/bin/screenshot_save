@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
-xkbbell; notify-send.sh "Saved screenshot on disk" --icon=/usr/share/icons/gnome/48x48/mimetypes/image.png && maim | xclip -selection clipboard -t image/png; xclip -selection clipboard -t image/png -o > ~/Pictures/Screenshots/$(date +%F-%T).png; paplay ~/.sounds/camera-shutter.oga
+xkbbell; notify-send.sh "Saved screenshot on disk" && maim | xclip -selection clipboard -t image/png; xclip -selection clipboard -t image/png -o > ~/Pictures/Screenshots/$(date +%F-%T).png; paplay ~/.sounds/camera-shutter.oga
