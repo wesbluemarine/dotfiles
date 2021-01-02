@@ -72,7 +72,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_s,      spawn,          {.v = dmenusrc } },
 	{      0,                       XK_Print,  spawn,          SHCMD("screenshot_save") },
 	{ ShiftMask,                    XK_Print,  spawn,          SHCMD("screenshot_sel") },
-	{ MODKEY,                       XF86XK_AudioMute,     spawn,          SHCMD("/home/makaba/.local/bin/volume.sh mute") },
+	{      0,                       XF86XK_AudioMute,     spawn,          SHCMD("/home/makaba/.local/bin/volume.sh mute") },
 	{      0,                       XF86XK_AudioLowerVolume,    spawn,          SHCMD("/home/makaba/.local/bin/volume.sh down") },
 	{      0,                       XF86XK_AudioRaiseVolume,    spawn,          SHCMD("/home/makaba/.local/bin/volume.sh up") },	
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
