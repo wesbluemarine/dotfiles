@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+ICON= 
+
+if pgrep -x 'ffmpeg' > /dev/null; then
+echo " ${ICON} "
+fi
