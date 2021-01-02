@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 if pgrep -x 'ffmpeg' > /dev/null; then
-    pkill -f ffmpeg
+    killall ffmpeg
 else
 	ffmpeg -y -f -i -r 60 -f x11grab -s 1920x1080 -i ${DISPLAY} -c:v libx264rgb -crf 0 -preset:v ultrafast ~/Videos/Screencast/$(date +%F-%T).mp4
 fi
