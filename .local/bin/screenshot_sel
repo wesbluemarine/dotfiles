@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-maim -o -s | xclip -selection clipboard -t image/png; xkbbell; notify-send.sh "Saved screenshot on clipboard" && paplay ~/.sounds/camera-shutter.oga
+maim -o -s --hidecursor | xclip -selection clipboard -t image/png; xkbbell; notify-send.sh "Saved screenshot on clipboard" && paplay ~/.sounds/camera-shutter.oga
