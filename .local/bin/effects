@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+if pgrep -x 'compton' > /dev/null; then
+    killall compton && notify-send.sh "Desktop effects disabled"
+else
+	notify-send.sh "Desktop effects enabled" && compton --config ~/.config/compton/compton.conf
+fi
