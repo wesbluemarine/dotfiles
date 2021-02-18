@@ -69,6 +69,6 @@ static const struct arg args[] = {
 	{ cpu_perc, " %s%% ", NULL	      },
 	{ temp, "%s°C  " , "/sys/class/thermal/thermal_zone2/temp" },
 	{ ram_perc, " %s%% ", NULL	      },
-	{ run_command, "%s", "~/.local/bin/slstatus/ffmpegnotify" },
+	{ run_command, "%s", "~/.local/bin/ffmpegnotify" },
 	{ datetime, " %s",           "%a %d %b %H:%M" },
 };
