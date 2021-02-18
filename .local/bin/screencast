@@ -1,7 +1,10 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
-if pgrep -x 'ffmpeg' > /dev/null; then
-    killall ffmpeg
+FILE=/tmp/screencast
+PID="$(</tmp/screencast)"
+
+if test -f "$FILE"; then
+	trap "rm -f /tmp/screencast" EXIT && kill "$PID" && notify-send.sh "Saved screencast on disk"
 else
-	ffmpeg -y -f -i -r 60 -f x11grab -s 1920x1080 -i ${DISPLAY} -c:v libx264rgb -crf 0 -preset:v ultrafast ~/Videos/Screencast/$(date +%F-%T).mp4
+	ffmpeg -y -f -i -r 60 -f x11grab -s 1920x1080 -i ${DISPLAY} -c:v libx264rgb -crf 0 -preset:v ultrafast ~/Videos/Screencast/$(date +%F-%T).mp4 >/dev/null 2>&1 & echo $! > /tmp/screencast
 fi
