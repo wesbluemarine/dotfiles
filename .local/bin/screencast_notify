@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+FILE=/tmp/screencast
+ICON= 
+
+if test -f "$FILE"; then
+
+echo " ${ICON} "
+fi
