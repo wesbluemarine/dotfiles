@@ -84,20 +84,20 @@ static const char IFC[] = "wlan0";  /* wifi interface */
 
 /* temporarily to get sound percentage for pulseaudio */
 static const char pulse_volume[] = "pactl subscribe | "
-	"stdbuf -oL grep \"Event 'change' on sink #0\" | "
+	"stdbuf -oL grep \"Event 'change' on sink #1\" | "
 	"(read line && pamixer --get-volume-human; ps --ppid $$ -o pid= |"
 	" xargs kill -9)";
 
 static struct arg_t args[] = {
 
-/* function		format			argument						interval (in ms) */
-{ netspeed_rx,	"  %sB/s  ",	"enp5s0",						1 SEC,	END },
-{ netspeed_tx,	" %sB/s  ",	"enp5s0",						1 SEC,	END },
-{ disk_perc,	" %s%%  ",		"/",							1 SEC,	END },
-{ temp,			" %s°C" ,		"hwmon1",						1 SEC,	END },
-{ cpu_perc,		"%s%%  ",		NULL,							1 SEC,	END },
-{ ram_perc,		" %s%%  ",		NULL,							1 SEC,	END },
-{ run_command,	" %s ",		"pamixer --get-volume-human",	1,		END },
-{ run_command, "%s",			"rec_notify ",					1 SEC,	END },
-{ datetime,		" %s",			"%a %d %b %H:%M" },
+/* function		format			argument				interval (in ms) */
+{ netspeed_rx,		"  %sB/s  ",		"enp5s0",				1 SEC,	END },
+{ netspeed_tx,		" %sB/s  ",		"enp5s0",				1 SEC,	END },
+{ disk_perc,		" %s%%  ",		"/",					1 SEC,	END },
+{ temp,			" %s°C" ,		"hwmon1",				1 SEC,	END },
+{ cpu_perc,		"%s%%  ",		 NULL,					 1 SEC,	END },
+{ ram_perc,		" %s%%  ",		NULL,					1 SEC,	END },
+{ run_command,		" %s ",		pulse_volume,				1,	END },
+{ run_command, 		"%s",			"rec_notify ",				 1 SEC,	END },
+{ datetime,		" %s",			"%a %d %b %H:%M"			 1 MIN, END },
 };
