@@ -90,14 +90,14 @@ static const char pulse_volume[] = "pactl subscribe | "
 
 static struct arg_t args[] = {
 
-/* function		format			argument				interval (in ms) */
-{ netspeed_rx,		"  %sB/s  ",		"enp5s0",				1 SEC,	END },
-{ netspeed_tx,		" %sB/s  ",		"enp5s0",				1 SEC,	END },
-{ disk_perc,		" %s%%  ",		"/",					1 SEC,	END },
-{ temp,			" %s°C" ,		"hwmon1",				1 SEC,	END },
-{ cpu_perc,		"%s%%  ",		 NULL,					 1 SEC,	END },
-{ ram_perc,		" %s%%  ",		NULL,					1 SEC,	END },
-{ run_command,		" %s ",		pulse_volume,				1,	END },
-{ run_command, 		"%s",			"rec_notify ",				 1 SEC,	END },
-{ datetime,		" %s",			"%a %d %b %H:%M"			 1 MIN, END },
+/* function		format			argument			interval (in ms) */
+{ netspeed_rx,		"  %sB/s  ",		"enp5s0",			1 SEC,	END },
+{ netspeed_tx,		" %sB/s  ",		"enp5s0",			1 SEC,	END },
+{ disk_perc,		" %s%%  ",		"/",				1 SEC,	END },
+{ temp,			" %s°C" ,		"hwmon1",			1 SEC,	END },
+{ cpu_perc,		"%s%%  ",		NULL,				1 SEC,	END },
+{ ram_perc,		" %s%%  ",		NULL,				1 SEC,	END },
+{ run_command,		" %s ",		pulse_volume,			1,	END },
+{ run_command, 		"%s",			"rec_notify ",			1 SEC,	END },
+{ datetime,		" %s",			"%a %d %b %H:%M",		1 MIN,	END },
 };
