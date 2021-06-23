@@ -69,6 +69,7 @@ static const struct arg args[] = {
 	{ cpu_perc, " %s%% ", NULL	      },
 	{ temp, "%s°C  " , "/sys/class/thermal/thermal_zone2/temp" },
 	{ ram_perc, " %s%% ", NULL	      },
-	{ run_command, "%s", "~/.local/bin/ffmpegnotify" },
+//	{ run_command, " %s ", "pamixer --get-volume-human" },
+	{ run_command, "%s", "~/.local/bin/rec_notify " },
 	{ datetime, " %s",           "%a %d %b %H:%M" },
 };
