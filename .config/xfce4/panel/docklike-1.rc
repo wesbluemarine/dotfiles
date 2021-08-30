@@ -1,0 +1,10 @@
+[user]
+pinned=/usr/share/applications/xfce4-terminal.desktop;/usr/share/applications/thunar.desktop;/var/lib/flatpak/exports/share/applications/org.mozilla.firefox.desktop;/var/lib/flatpak/exports/share/applications/org.telegram.desktop.desktop;
+noWindowsListIfSingle=true
+showPreviews=false
+showWindowCount=false
+indicatorStyle=1
+indicatorOrientation=0
+forceIconSize=true
+iconSize=32
+onlyDisplayVisible=true
