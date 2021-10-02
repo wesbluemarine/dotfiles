@@ -3,13 +3,13 @@
 ~/.local/bin/xvisbell/xvisbell &
 hsetroot -solid "#f2e5bc" &
 picom --config ~/.config/picom/picom.conf &
-redshift &
+redshift -l 43.8554:10.5664 &
 xbanish &
 dbus-launch dunst &
 
 while true; do
 # Log stderror to a file
-  ~/.local/bin/dwm-6.2/dwm 2> ~/.dwm.log
+dbus-launch ~/.local/bin/dwm-6.2/dwm 2> ~/.dwm.log
 #No error logging
   #~/.local/bin/dwm-6.2/dwm >/dev/null 2>&1
 done
