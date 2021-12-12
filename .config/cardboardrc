@@ -1,0 +1,61 @@
+#!/bin/sh
+
+alias cutter=$HOME/.local/bin/cardboard/build/cutter/cutter
+
+mod=alt
+
+cutter config mouse_mod $mod
+
+cutter bind $mod+shift+q quit
+cutter bind $mod+shift+r exec $HOME/.config/cardboard/cardboardrc
+cutter bind $mod+shift+return exec foot
+cutter bind $mod+space exec ulauncher 
+cutter bind $mod+left focus left
+cutter bind $mod+right focus right
+cutter bind $mod+shift+left move -10 0
+cutter bind $mod+shift+right move 10 0
+cutter bind $mod+shift+up move 0 -10
+cutter bind $mod+shift+down move 0 10
+cutter bind $mod+ctrl+left resize -10 0
+cutter bind $mod+ctrl+right resize 10 0
+cutter bind $mod+ctrl+up resize 0 -10
+cutter bind $mod+ctrl+down resize 0 10
+cutter bind $mod+shift+i insert_into_column
+cutter bind $mod+shift+o pop_from_column
+cutter bind $mod+shift+c close
+for i in $(seq 1 6); do
+	cutter bind $mod+$i workspace switch $(( i - 1 ))
+	cutter bind $mod+ctrl+$i workspace move $(( i - 1 ))
+done
+
+cutter bind $mod+shift+space toggle_floating
+cutter exec gammastep -l 43.8554:10.5664#!/bin/sh
+
+alias cutter=$HOME/.local/bin/cardboard/build/cutter/cutter
+
+mod=alt
+
+cutter config mouse_mod $mod
+
+cutter bind $mod+shift+q quit
+cutter bind $mod+shift+r exec $HOME/.config/cardboard/cardboardrc
+cutter bind $mod+shift+return exec foot
+cutter bind $mod+space exec ulauncher 
+cutter bind $mod+left focus left
+cutter bind $mod+right focus right
+cutter bind $mod+shift+left move -10 0
+cutter bind $mod+shift+right move 10 0
+cutter bind $mod+shift+up move 0 -10
+cutter bind $mod+shift+down move 0 10
+cutter bind $mod+ctrl+up resize 0 -10
+cutter bind $mod+ctrl+down resize 0 10
+cutter bind $mod+shift+i insert_into_column
+cutter bind $mod+shift+o pop_from_column
+cutter bind $mod+shift+c close
+for i in $(seq 1 6); do
+	cutter bind $mod+$i workspace switch $(( i - 1 ))
+	cutter bind $mod+ctrl+$i workspace move $(( i - 1 ))
+done
+
+cutter bind $mod+shift+space toggle_floating
+cutter exec gammastep -l 43.8554:10.5664cutter bind $mod+ctrl+down resize 0 10
