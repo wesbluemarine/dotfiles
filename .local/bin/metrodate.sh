@@ -1,4 +1,3 @@
 #!/bin/sh
 
-pkill -f nwg-wrapper;nwg-wrapper -l2 -s ~/.build/nwg-wrapper/nwg_wrapper/config/date-wttr.sh -r 6000 -c ~/.build/nwg-wrapper/nwg_wrapper/config/date-wttr.css -p right -mt 1000 -j center
-
+pkill -f nwg-wrapper;nwg-wrapper -l2 -s ~/.config/nwg-wrapper/date.sh -r 6000 -c ~/.config/nwg-wrapper/date.css -p right -mt 1020 -j center
