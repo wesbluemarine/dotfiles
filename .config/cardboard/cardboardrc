@@ -24,6 +24,7 @@ cutter bind $mod+shift+i insert_into_column
 cutter bind $mod+shift+o pop_from_column
 cutter bind $mod+shift+c close
 cutter bind $mod+tab focus cycle
+
 for i in $(seq 1 6); do
 	cutter bind $mod+$i workspace switch $(( i - 1 ))
 	cutter bind $mod+ctrl+$i workspace move $(( i - 1 ))
@@ -31,4 +32,5 @@ done
 
 cutter bind $mod+shift+space toggle_floating
 cutter exec color_temp.sh
+cutter exec toolbox run swaybg -i ~/Pictures/Wallpapers/tengu_1920x1080.jpg
 cutter exec metrodate.sh
