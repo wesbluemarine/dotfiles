@@ -32,5 +32,5 @@ done
 
 cutter bind $mod+shift+space toggle_floating
 cutter exec color_temp.sh
-cutter exec toolbox run swaybg -i ~/Pictures/Wallpapers/tengu_1920x1080.jpg
+cutter exec swaybg -i ~/Pictures/Wallpapers/tengu_1920x1080.jpg
 cutter exec metrodate.sh
