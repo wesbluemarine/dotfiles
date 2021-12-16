@@ -28,8 +28,5 @@ hi CursorLine cterm=NONE ctermbg=black ctermfg=white
 set undofile
 set undodir=/tmp
 
-set undofile
-set undodir=/tmp
-
 set wildmode=longest,list,full
 set wildmenu
