@@ -1,0 +1,35 @@
+set number
+set relativenumber
+set cursorline
+set ruler
+set showmatch
+set ignorecase
+set incsearch
+set hlsearch
+set bs=2
+set nobackup
+set clipboard+=unnamedplus
+set mouse=a
+set paste
+set go+=a
+set encoding=utf-8
+set invnumber
+
+set list listchars=nbsp:¬,tab:»·,trail:·,extends:>
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set noswapfile
+
+syntax on
+colorscheme elflord
+highlight LineNr ctermbg=black
+hi CursorLine cterm=NONE ctermbg=black ctermfg=white
+set undofile
+set undodir=/tmp
+
+set undofile
+set undodir=/tmp
+
+set wildmode=longest,list,full
+set wildmenu
