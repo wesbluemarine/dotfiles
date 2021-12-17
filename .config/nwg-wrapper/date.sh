@@ -2,5 +2,5 @@
 
 time=$(LC_ALL=C TZ='Europe/Rome' date '+%H:%M %a ')
 date=$(date '+%d %B %Y')
-echo '<span size="20000" face="segoeui" weight="light" foreground="#FFFFFF">'  $time'</span><span size="10000" face="segoeui" weight="light" foreground="#FFFFFF">' 
+echo '<span size="22000" face="segoeui" weight="light" foreground="#FFFFFF">'  $time'</span><span size="9000" face="segoeui" weight="light" foreground="#FFFFFF">' 
 echo $date'</span>'
