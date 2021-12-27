@@ -1,0 +1,43 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono";
+    font-size: 12px;
+    min-height: 0;
+    color: #ffffff;
+}
+
+#tags button  {
+    background-color: #006060;
+    padding: 3px;
+    border-radius: 10px;
+
+}
+window#waybar {
+    background-color: #006060;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#tags button.occupied  {
+    background-color: #338080;
+
+}
+
+#tags button.focused  {
+    background-color: #80b0b0;
+}
+
+#clock
+{
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #338080;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#clock {
+    color: #ffffff;
+}
