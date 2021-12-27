@@ -11,6 +11,9 @@
 # Use the "logo" key as the primary modifier
 mod="Mod1"
 
+# Focus follows mouse cursor
+riverctl focus-follows-cursor normal
+
 # Mod P for bemenu
 riverctl map normal $mod P spawn ~/.local/bin/bemenu_run
 
