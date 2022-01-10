@@ -1,5 +1,12 @@
 #!/usr/bin/env sh
 
-XKB_DEFAULT_LAYOUT="us"
-XKB_DEFAULT_VARIANT="intl"
-dbus-launch --exit-with-session river
+export XKB_DEFAULT_LAYOUT=us
+export XKB_DEFAULT_VARIANT=intl
+export XDG_SESSION_TYPE=wayland
+export XDG_CURRENT_DESKTOP=river
+export CLUTTER_BACKEND=wayland
+export GDK_BACKEND=wayland
+export MOZ_ENABLE_WAYLAND=1
+export LITE_SCALE=1.0
+export QT_QPA_PLATFORM=xcb
+dbus-run-session river
