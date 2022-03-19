@@ -20,6 +20,9 @@ riverctl focus-follows-cursor normal
 # Mod P for bemenu
 riverctl map normal $mod P spawn ~/.local/bin/bemenu_run
 
+# Mod+Shift+P for clipman
+riverctl map normal $mod+Shift P spawn ~/.local/bin/clipman_run 
+
 # Desktop screenshot to clipboard
 riverctl map normal $mod S spawn ~/.local/bin/screenshot_full
 
@@ -156,7 +159,7 @@ do
 done
 
 # Set background and border color
-riverctl background-color 0xEEE8D5
+riverctl background-color 0xFBF1C7
 riverctl border-color-focused 0xFF0000
 riverctl border-color-unfocused 0x000000
 riverctl border-width 1
@@ -174,6 +177,8 @@ riverctl csd-filter-remove app-id "gedit"
 # Autostart
 riverctl spawn waybar
 riverctl spawn 'wlsunset  -l 43.8554 -L 10.5664'
+riverctl spawn dunst
+riverctl spawn 'exec wl-paste -t text --watch clipman store'
 
 # Set and exec into the default layout generator, rivertile.
 # River will send the process group of the init executable SIGTERM on exit.
