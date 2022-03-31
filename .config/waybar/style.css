@@ -9,33 +9,33 @@
 }
 
 #tags button  {
-    background-color: #006060;
+    background-color: #E87078;
     padding: 3px;
     padding-left: 8px;
     padding-right: 8px;
 }
 window#waybar {
-    background-color: #006060;
+    background-color: #E87078;
     transition-property: background-color;
     transition-duration: .5s;
 }
 
 #tags button.occupied  {
-    background-color: #338080;
+    background-color: #ED8D93;
 }
 
 #tags button.focused  {
-    background-color: #80b0b0;
+    background-color: #f4b8bc;
 }
 
 #tags button.urgent  {
-    background-color: #4d9090;
+    background-color: #ef9ba1;
 }
 
 #tags button:hover {
     box-shadow: inherit;
     text-shadow: inherit;
-    background: #99bfbf;
+    background: #f6c6c9;
 }
 
 #custom-netspeed,
@@ -46,9 +46,17 @@ window#waybar {
     padding-right: 10px;
 }
 
+#custom-dunst
+{
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 18px;
+}
+
 #clock
 {
-    background: #338080;
+
+    background: #ed8d93;
     padding: 3px;
     padding-left: 10px;
     padding-right: 10px;
