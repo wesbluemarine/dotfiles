@@ -1,76 +1,37 @@
 {
-    "height": 23, // Waybar height (to be removed for auto height)
     "modules-center": ["river/tags"],
     "modules-right": ["custom/netspeed", "pulseaudio", "clock"],
      "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "<small>{:%Y %B}</small>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%a %d %b %H:%M %Y}"
     },
 
+    "river/tags": {
+        "num-tags": 9,
+        "tag-labels": [
+            "α",
+            "β",
+            "γ",
+            "δ",
+            "ε",
+            "ζ",
+            "η",
+            "θ",
+            "ι"
+        ]
+    },
+
     "custom/netspeed": {
-        "format": "",
-        "format-alt": "{}",
         "interval": 5,
         "exec": "~/.config/waybar/modules/netspeed.sh"
    },
 
-    "network": {
-        "interface": "enp5s0",
-        "format-wifi": "  {essid} {signalStrength}%",
-        "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
-        "format-linked": " {ifname} (No IP)",
-        "format-disconnected": "⚠ (Disconnected)",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "on-click": "foot -e nmtui",
-        "tooltip": true
-    },
+    "custom/dunst": {
+        "exec": "~/.config/waybar/scripts/dunst.sh",
+        "on-click": "dunstctl set-paused toggle",
+        "restart-interval": 1,
+   },
 
-    "disk": {
-        "format": " {percentage_used}%",
-        "path": "/",
-        "interval": 60,
-        "on-click": "thunar",
-        "tooltip": true
-    },
-
-    "disk": {
-        "format": " {percentage_used}%",
-        "path": "/",
-        "interval": 60,
-        "on-click": "thunar",
-        "tooltip": true
-    },
-
-    "cpu": {
-        "format": "{usage:3}%",
-        "interval": 5,
-        "states": {
-        "warning": 50,
-        "critical": 90
-        },
-        "tooltip": true
-    },
-
-    "temperature": {
-        "format": " {temperatureC}°C",
-        "format-critical": " {temperatureC}°C ",
-        "interval": 5,
-        "hwmon-path": "/sys/class/hwmon/hwmon1/temp2_input",
-        "critical-threshold": 80,
-        "tooltip": false
-    },
-
-    "memory": {
-        "format": " {}%",
-        "interval": 5,
-        //"max-length": 20,
-        "states": {
-            "warning": 50,
-            "critical": 90
-        },
-        "tooltip": true
-    },
    "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{icon} {volume}% {format_source}",
@@ -88,17 +49,8 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol",
         "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
 
     },
-
-   "custom/weather": {
-   "format": "[LU] {}%",
-   "tooltip": false,
-   "min-length": 5,
-   "exec": "curl 'https://wttr.in/Lucca?m&format='%t''",
-   "interval": 3600,
-},
 
 }
