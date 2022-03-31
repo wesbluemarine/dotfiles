@@ -12,7 +12,7 @@
 mod="Mod1"
 
 # Set cursor theme
-riverctl xcursor-theme Adwaita
+riverctl xcursor-theme Oxygen_Black
 
 # Focus follows mouse cursor
 riverctl focus-follows-cursor normal
@@ -22,6 +22,9 @@ riverctl map normal $mod P spawn ~/.local/bin/bemenu_run
 
 # Mod+Shift+P for clipman
 riverctl map normal $mod+Shift P spawn ~/.local/bin/clipman_run 
+
+# Mod+Shift+Ctrl+P for clear clipman
+riverctl map normal $mod+Shift+Control P spawn 'clipman clear --all'
 
 # Desktop screenshot to clipboard
 riverctl map normal $mod S spawn ~/.local/bin/screenshot_full
@@ -167,8 +170,8 @@ done
 
 # Set background and border color
 riverctl background-color 0xFBF1C7
-riverctl border-color-focused 0xFF0000
-riverctl border-color-unfocused 0x000000
+riverctl border-color-focused 0x68D8B4
+riverctl border-color-unfocused 0x4C566A
 riverctl border-width 1
 
 # Set keyboard repeat rate
