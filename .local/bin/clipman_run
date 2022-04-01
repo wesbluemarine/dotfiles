@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
-clipman pick -t bemenu -T' --fn "JetBrainsMono 10 Bold" -H 23 -i -l 0 --nb #006060 --sb #338080 --tb #006060 --tf #bbbbbb --fb #006060 --ff #bbbbbb --hb #338080 --hf #ffffff'
+clipman pick -t bemenu -T' --fn "JetBrainsMono Bold 10" -H 23 -i -l 0 --nb #E87078 --nf #dddddd --sb #E87078 --tb #E87078 --tf #ffffff --fb #E87078 --ff #ffffff --hb #ed8d93 --hf #ffffff'
