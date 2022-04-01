@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+ j4-dmenu-desktop --no-generic --dmenu="((stest -flx $(echo $PATH | tr : ' ') | sort -u);cat) | bemenu -H 23 -i --fn 'JetBrainsMono Bold 10' --nb='#E87078' --nf '#dddddd' --sb='#ed8d93' --tb='#E87078' --tf='#ffffff' --fb='#E87078' --ff='#ffffff' --hb='#ed8d93' --hf='#ffffff' -p ''"
