@@ -5,6 +5,7 @@ geometry = "300x60-20+40"
 indicate_hidden = yes
 shrink = no
 separator_height = 1
+separator_color = auto
 padding = 24
 horizontal_padding = 24
 frame_width = 2
@@ -36,18 +37,18 @@ history = ctrl+shift
 
 [urgency_low]
 timeout = 4
-background = "#003030""
-foreground = "#bbbbbb"
-frame_color = "#003030"
+background = "#323028"
+foreground = "#ffffff"
+frame_color = "#323028"
 
 [urgency_normal]
 timeout = 8
-background = "#006060"
-foreground = "#eeeeee"
-frame_color = "#006060"
+background = "#323028"
+foreground = "#ffffff"
+frame_color = "#323028"
 
 [urgency_critical]
 timeout = 0
-background = "#006060"
-foreground = "#eeeeee"
-frame_color = "#006060"
+background = "#323028"
+foreground = "#ffffff"
+frame_color = "#323028"
