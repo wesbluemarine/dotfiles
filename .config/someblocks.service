@@ -1,0 +1,10 @@
+[Unit]
+Description=Modular status bar for somebar
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/someblocks
+
+[Install]
+WantedBy=default.target
