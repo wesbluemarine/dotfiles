@@ -2,7 +2,7 @@
 
 exec dbus-run-session dwl -s 'cat | somebar &
 
-wbg ~/Pictures/Wallpapers/FBF1C7.jpeg &
+wbg ~/Pictures/Wallpapers/696969.jpeg &
 fnott &
 exec wl-paste -t text --watch clipman store --no-persist &
 wlsunset  -l 43.8554 -L 10.5664 &'
