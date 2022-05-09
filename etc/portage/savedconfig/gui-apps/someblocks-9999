@@ -2,12 +2,12 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
 	{"", "/home/makaba/.local/bin/netspeed",	1,		0},
-	{" ", "/home/makaba/.local/bin/disk_usage",	10,		0},
-	{" ", "/home/makaba/.local/bin/cpu_usage",	1,		0},
+	{"", "/home/makaba/.local/bin/disk_usage",	10,		0},
+	{"", "/home/makaba/.local/bin/cpu_usage",	1,		0},
 	{"", "/home/makaba/.local/bin/cpu_temp",	1,		0},
-	{" ", "/home/makaba/.local/bin/mem_usage",	1,		0},
+	{"", "/home/makaba/.local/bin/mem_usage",	1,		0},
 
-	{"", "date '+%a %d %b %H:%M'",					5,		0},
+	{"", "date '+%a %d %b %H:%M %Y'",		5,		0},
 };
 
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.
