@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
- j4-dmenu-desktop --no-generic --dmenu="((stest -flx $(echo $PATH | tr : ' ') | sort -u);cat) | bemenu -H 22 -i --fn 'terminus 8' --nb='#222222' --nf '#dddddd' --sb='#005577' --tb='#222222' --tf='#bbbbbb' --fb='#222222' --ff='#bbbbbb' --hb='#005577' --hf='#eeeeee' -p ''"
+bemenu-run -i -H 22 --hp 10 --fn 'terminus 14' --ab='#222222' --af '#dddddd' --nb='#222222' --nf '#dddddd' --sb='#005577' --tb='#222222' --tf='#bbbbbb' --fb='#222222' --ff='#bbbbbb' --hb='#005577' --hf='#eeeeee' -p ''
