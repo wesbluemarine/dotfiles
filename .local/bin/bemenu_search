@@ -1,0 +1,3 @@
+#!/bin/sh
+
+fd . /home/makaba | sed -e "s/'/\\\'/g" -e 's/\ /\\ /g' | sort -f | bemenu -i -H 22 --hp 10 --fn 'terminus 14' --ab='#222222' --af '#dddddd' --nb='#222222' --nf '#dddddd' --sb='#005577' --tb='#222222' --tf='#bbbbbb' --fb='#222222' --ff='#bbbbbb' --hb='#005577' --hf='#eeeeee' -p 'search'| xargs -r xdg-open
