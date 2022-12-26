@@ -15,35 +15,56 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "noFan"; # Define your hostname.
+  # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
-  # The global useDHCP flag is deprecated, therefore explicitly set to false here.
-  # Per-interface useDHCP will be mandatory in the future, so this generated config
-  # replicates the default behaviour.
-  networking.useDHCP = false;
-  networking.interfaces.enp5s0.useDHCP = true;
-  #networking.connman.enable = true;
-
+  # Set your time zone.
+  time.timeZone = "Europe/Rome";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Select internationalisation properties.
-  i18n = {
-  consoleFont = "Lat2-Terminus16";
-  consoleKeyMap = "us";
-  defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = "en_US.UTF-8";
+  console = {
+     font = "Lat2-Terminus16";
+     keyMap = "us";
+     #useXkbConfig = true; # use xkbOptions in tty.
+   };
+
+  # Enable the X11 windowing system.
+  # services.xserver.enable = true;
+
+  security.polkit.enable = true;
+ 
+  # Configure keymap in X11
+  # services.xserver.layout = "us";
+  # services.xserver.xkbOptions = {
+  #   "eurosign:e";
+  #   "caps:escape" # map caps to escape.
+  # };
+
+  # Enable CUPS to print documents.
+  # services.printing.enable = true;
+
+  # Enable sound.
+  sound.enable = false;
+  # hardware.pulseaudio.enable = true;
+  # rtkit is optional but recommended
+  security.rtkit.enable = true;
+  services.pipewire = {
+  enable = true;
+  alsa.enable = true;
+  alsa.support32Bit = true;
+  pulse.enable = true;
+  # If you want to use JACK applications, uncomment this
+  #jack.enable = true;
   };
 
-  # Set your time zone.
-  time.timeZone = "Europe/Rome";
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    xorg.setxkbmap fish connman-gtk wget git neovim kitty maim xclip pcmanfm gnome3.adwaita-icon-theme mupdf zathura sxiv windowmaker geany pavucontrol ffmpeg mpv gimp firefox thunderbird unrar unzip p7zip khal
-  ];
+  # Enable touchpad support (enabled default in most desktopManager).
+  # services.xserver.libinput.enable = true;
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.packageOverrides = pkgs: {
@@ -51,7 +72,7 @@
   };
   hardware.opengl = {
     enable = true;
-    extraPackages = with pkgs; [
+        extraPackages = with pkgs; [
       vaapiIntel
       vaapiVdpau
       libvdpau-va-gl
@@ -65,12 +86,31 @@
     fstrim.enable = true;
 };
 
-  programs.fish.enable = true;
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users.makaba = {
+     isNormalUser = true;
+     home= "/home/makaba";
+     createHome= true;
+     extraGroups = [ "wheel" "video" ]; # Enable ‘sudo’ for the user.
+  #   packages = with pkgs; [
+  #     firefox
+  #     thunderbird
+  #   ];
+  };
+
+  # List packages installed in system profile. To search, run:
+  # $ nix search wget
+  environment.systemPackages = with pkgs; [
+  bc blackbox-terminal cura dbus-glib easyeffects firefox-bin dconf evince gnome.gnome-calculator gnome.file-roller gnome.dconf-editor dejavu_fonts git gimp gnome.adwaita-icon-theme gnome.nautilus gnome-text-editor jetbrains-mono labwc mako image-roll mpv mpvpaper neovim nodejs notejot nwg-wrapper pavucontrol shotman showmethekey source-code-pro ulauncher wf-recorder wlsunset wlrctl xdg-user-dirs
+   ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
-  # programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
+  # programs.gnupg.agent = {
+  #   enable = true;
+  #   enableSSHSupport = true;
+  # };
 
   # List services that you want to enable:
 
@@ -83,64 +123,17 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
+  # Copy the NixOS configuration file and link it from the resulting system
+  # (/run/current-system/configuration.nix). This is useful in case you
+  # accidentally delete configuration.nix.
+  # system.copySystemConfiguration = true;
 
-  # Enable sound.
-  sound.enable = true;
-  hardware.pulseaudio.enable = true;
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-  services.xserver.layout = "us";
-  services.xserver.xkbVariant = "intl";
-  #services.xserver.xkbOptions = "eurosign:e";
-  services.xserver.config = ''
-    Section "Device"
-	Identifier "Intel Graphics"
-  	Driver "modesetting"
-  	Option "TearFree" "true"
-	Option "DRI" "3"
-  	Option  "TripleBuffer" "true"
-    EndSection
-'';
-
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.desktopManager.default = "wmaker";
-  services.xserver.desktopManager.session =
-    [ { manage = "desktop";
-        name = "wmaker";
-	start = ''
-	  xmodmap ~/.Xmodmap
-	  ${pkgs.windowmaker}/bin/wmaker &
-	  waitPID=$!
-	'';
-     }
-     ];
-  
-  hardware.opengl.driSupport = true;
-
-  # Enable touchpad support.
-  # services.xserver.libinput.enable = true;
-
-  # Enable the KDE Desktop Environment.
-  # services.xserver.displayManager.sddm.enable = true;
-  # services.xserver.desktopManager.plasma5.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.makaba = {
-  isNormalUser = true;
-  home = "/home/makaba";
-  createHome = true;
-  extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-  shell = "/run/current-system/sw/bin/fish";
-  };
-
-  # This value determines the NixOS release with which your system is to be
-  # compatible, in order to avoid breaking some software such as database
-  # servers. You should change this only after NixOS release notes say you
-  # should.
-  system.stateVersion = "19.09"; # Did you read the comment?
+  # This value determines the NixOS release from which the default
+  # settings for stateful data, like file locations and database versions
+  # on your system were taken. It‘s perfectly fine and recommended to leave
+  # this value at the release version of the first install of this system.
+  # Before changing this value read the documentation for this option
+  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
+  system.stateVersion = "22.11"; # Did you read the comment?
 
 }
-
