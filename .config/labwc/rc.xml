@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+
+<!--
+  This is a very simple config file with many options missing. For a complete
+  set of options with comments, see docs/rc.xml.all
+-->
+
+<labwc_config>
+
+  <core>
+    <decoration>client</decoration> 	  
+    <gap>0</gap>
+    <cycleViewPreview>no</cycleViewPreview>
+    <cycleViewOutlines>no</cycleViewOutlines>
+    <cycleViewOutlines>no</cycleViewOutlines>
+  </core>
+
+  <focus>
+    <focusNew>no</focusNew>
+    <focusLast>no</focusLast>
+    <followMouse>no</followMouse>
+     <focusDelay>10000</focusDelay>
+    <underMouse>no</underMouse>
+    <raiseOnFocus>no</raiseOnFocus>
+  </focus>
+
+  <theme>
+    <name></name>
+    <cornerRadius>8</cornerRadius>
+    <font><name>sans</name><size>10</size></font>
+  </theme>
+
+  <keyboard>
+   <default />
+     <keybind key="Super_L">
+      <action name="Execute"><command>ulauncher</command></action>
+    </keybind>
+
+     <keybind key="F8">
+	     <action name="Execute"><command>~/.local/bin/runraise com.raggesilver.BlackBox blackbox</command></action>
+    </keybind>
+
+     <keybind key="F9">
+	     <action name="Execute"><command>sh -c 'wlrctl window focus title:"Home" || nautilus'</command></action>
+    </keybind>
+
+    <keybind key="F10">
+	     <action name="Execute"><command>~/.local/bin/runraise firefox</command></action>
+    </keybind>
+
+
+    <keybind key="Print">
+      <action name="Execute"><command>shotman output</command></action>
+    </keybind>
+    <keybind key="A-m">
+	<action name="Iconify"/>
+</keybind>
+
+</keyboard>
+  
+   <placement>
+     <policy>smart</policy>
+     <center>yes</center>
+ </placement>
+
+</labwc_config>
